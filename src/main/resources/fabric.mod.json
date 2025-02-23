@@ -16,7 +16,7 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"net.kaupenjoe.mccourse.Mccourse"
+			"net.kaupenjoe.mccourse.MCCourseMod"
 		],
 		"fabric-datagen": [
 			"net.kaupenjoe.mccourse.MccourseDataGenerator"

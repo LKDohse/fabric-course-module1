@@ -1,0 +1,14 @@
+{
+  "values": [
+    "mccourse:fluorite_block",
+    "mccourse:fluorite_ore",
+    "mccourse:fluorite_deepslate_ore",
+    "mccourse:fluorite_end_ore",
+    "mccourse:fluorite_nether_ore",
+    "mccourse:fluorite_fence",
+    "mccourse:fluorite_fence_gate",
+    "mccourse:fluorite_wall",
+    "mccourse:fluorite_button",
+    "mccourse:fluorite_pressure_plate"
+  ]
+}
