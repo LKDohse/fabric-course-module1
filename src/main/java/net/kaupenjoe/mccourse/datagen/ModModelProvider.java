@@ -44,5 +44,18 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.STRAWBERRY, Models.GENERATED);
         itemModelGenerator.register(ModItems.STARLIGHT_ASHES, Models.GENERATED);
         itemModelGenerator.register(ModItems.CHAINSAW, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.FLUORITE_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.FLUORITE_AXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.FLUORITE_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.FLUORITE_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.FLUORITE_HOE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.FLUORITE_PAXEL, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.FLUORITE_HAMMER, Models.HANDHELD);
+
+        itemModelGenerator.register(ModItems.FLUORITE_HELMET, Models.GENERATED);
+        itemModelGenerator.register(ModItems.FLUORITE_CHESTPLATE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.FLUORITE_LEGGINGS, Models.GENERATED);
+        itemModelGenerator.register(ModItems.FLUORITE_BOOTS, Models.GENERATED);
     }
 }

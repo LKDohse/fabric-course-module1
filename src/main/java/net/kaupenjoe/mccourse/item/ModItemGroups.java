@@ -21,6 +21,19 @@ public class ModItemGroups {
                         entries.add(ModItems.CHAINSAW);
                         entries.add(ModItems.STRAWBERRY);
                         entries.add(ModItems.STARLIGHT_ASHES);
+
+                        entries.add(ModItems.FLUORITE_SWORD);
+                        entries.add(ModItems.FLUORITE_PICKAXE);
+                        entries.add(ModItems.FLUORITE_SHOVEL);
+                        entries.add(ModItems.FLUORITE_AXE);
+                        entries.add(ModItems.FLUORITE_HOE);
+                        entries.add(ModItems.FLUORITE_PAXEL);
+                        entries.add(ModItems.FLUORITE_HAMMER);
+
+                        entries.add(ModItems.FLUORITE_HELMET);
+                        entries.add(ModItems.FLUORITE_CHESTPLATE);
+                        entries.add(ModItems.FLUORITE_LEGGINGS);
+                        entries.add(ModItems.FLUORITE_BOOTS);
     }).build());
 
     public static final ItemGroup FLUORITE_BLOCK_GROUP = Registry.register(Registries.ITEM_GROUP,

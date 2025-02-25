@@ -4,9 +4,12 @@ import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.kaupenjoe.mccourse.MCCourseMod;
 import net.kaupenjoe.mccourse.item.custom.ChainsawItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
-import net.minecraft.item.ItemStack;
+import net.kaupenjoe.mccourse.item.custom.HammerItem;
+import net.kaupenjoe.mccourse.item.custom.ModEffectSwordItem;
+import net.kaupenjoe.mccourse.item.custom.PaxelItem;
+import net.kaupenjoe.mccourse.util.ModTags;
+import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.item.*;
 import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -29,6 +32,46 @@ public class ModItems {
         }
     });
     public static final Item STARLIGHT_ASHES = registerItem("starlight_ashes", new Item(new Item.Settings()));
+
+    public static final Item FLUORITE_SWORD = registerItem("fluorite_sword",
+            new ModEffectSwordItem(ModToolMaterials.FLUORITE,
+                    new Item.Settings().attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.FLUORITE, 3, -2.4f)), StatusEffects.LEVITATION));
+    public static final Item FLUORITE_PICKAXE = registerItem("fluorite_pickaxe",
+            new PickaxeItem(ModToolMaterials.FLUORITE,
+                    new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.FLUORITE, 1, -2.8f))));
+    public static final Item FLUORITE_SHOVEL = registerItem("fluorite_shovel",
+            new ShovelItem(ModToolMaterials.FLUORITE,
+                    new Item.Settings().attributeModifiers(ShovelItem.createAttributeModifiers(ModToolMaterials.FLUORITE, 1.5f, -3f))));
+    public static final Item FLUORITE_HOE = registerItem("fluorite_hoe",
+            new HoeItem(ModToolMaterials.FLUORITE,
+                    new Item.Settings().attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterials.FLUORITE, 0, -2.4f))));
+    public static final Item FLUORITE_AXE = registerItem("fluorite_axe",
+            new AxeItem(ModToolMaterials.FLUORITE,
+                    new Item.Settings().attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.FLUORITE, 6, -2.4f))));
+
+    public static final Item FLUORITE_PAXEL = registerItem("fluorite_paxel",
+            new PaxelItem(ModToolMaterials.FLUORITE,
+                    ModTags.Blocks.PAXEL_MINEABLE,
+                    new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.FLUORITE, 4, -2.3f))));
+
+    public static final Item FLUORITE_HAMMER = registerItem("fluorite_hammer",
+            new HammerItem(ModToolMaterials.FLUORITE,
+                    ModTags.Blocks.HAMMER_MINEABLE,
+                    new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.FLUORITE, 8, -3.5f))));
+
+    public static final Item FLUORITE_HELMET = registerItem("fluorite_helmet",
+            new ArmorItem(ModArmorMaterials.FLUORITE_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings().maxDamage(ArmorItem.Type.HELMET.getMaxDamage(15))));
+
+    public static final Item FLUORITE_CHESTPLATE = registerItem("fluorite_chestplate",
+            new ArmorItem(ModArmorMaterials.FLUORITE_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Settings().maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(15))));
+
+    public static final Item FLUORITE_LEGGINGS = registerItem("fluorite_leggings",
+            new ArmorItem(ModArmorMaterials.FLUORITE_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Settings().maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(15))));
+
+    public static final Item FLUORITE_BOOTS = registerItem("fluorite_boots",
+            new ArmorItem(ModArmorMaterials.FLUORITE_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings().maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(15))));
+
+
 
     public static Item registerItem(String name, Item item){
         return Registry.register(Registries.ITEM, Identifier.of(MCCourseMod.MOD_ID, name), item);
