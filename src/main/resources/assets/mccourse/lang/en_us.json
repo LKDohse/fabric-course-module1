@@ -12,6 +12,11 @@
   "item.mccourse.fluorite_axe": "Fluorite Axe",
   "item.mccourse.fluorite_paxel": "Fluorite Paxel",
   "item.mccourse.fluorite_hammer": "Fluorite Hammer",
+  "item.mccourse.fluorite_helmet": "Fluorite Helmet",
+  "item.mccourse.fluorite_chestplate": "Fluorite Chestplate",
+  "item.mccourse.fluorite_boots": "Fluorite Boots",
+  "item.mccourse.fluorite_leggings": "Fluorite Leggings",
+  "item.mccourse.fluorite_horse_armor": "Fluorite Horse Armor",
 
   "block.mccourse.fluorite_block": "Fluorite Block",
   "block.mccourse.fluorite_ore": "Fluorite Ore",
@@ -29,7 +34,7 @@
   "block.mccourse.fluorite_door": "Fluorite Door",
   "block.mccourse.fluorite_trapdoor": "Fluorite Trapdoor",
 
-  "itemgroup.fluorite": "Fluorite",
+  "itemgroup.fluorite": "Fluorite Items",
   "itemgroup.fluorite_blocks": "Fluorite Blocks",
 
   "tooltip.mccourse.chainsaw.tooltip.shift": "Press §eShift§r for more information!",

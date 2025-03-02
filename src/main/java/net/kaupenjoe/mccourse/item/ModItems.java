@@ -3,10 +3,7 @@ package net.kaupenjoe.mccourse.item;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.kaupenjoe.mccourse.MCCourseMod;
-import net.kaupenjoe.mccourse.item.custom.ChainsawItem;
-import net.kaupenjoe.mccourse.item.custom.HammerItem;
-import net.kaupenjoe.mccourse.item.custom.ModEffectSwordItem;
-import net.kaupenjoe.mccourse.item.custom.PaxelItem;
+import net.kaupenjoe.mccourse.item.custom.*;
 import net.kaupenjoe.mccourse.util.ModTags;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.*;
@@ -25,7 +22,7 @@ public class ModItems {
     public static final Item CHAINSAW = registerItem("chainsaw", new ChainsawItem(new Item.Settings().maxDamage(32)));
     public static final Item STRAWBERRY = registerItem("strawberry", new Item(new Item.Settings().food(ModFoodComponents.STRAWBERRY)) {
         @Override
-        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type){
+        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
             tooltip.add(Text.translatable("tooltip.mccourse.strawberry.tooltip.1"));
 
             super.appendTooltip(stack, context, tooltip, type);
@@ -59,21 +56,22 @@ public class ModItems {
                     ModTags.Blocks.HAMMER_MINEABLE,
                     new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.FLUORITE, 8, -3.5f))));
 
+    // For this armor set to get its full-equip effects, the ModArmorItem class only needs to apply to one of the pieces of armor
+    // since you're going to have the full set equipped for it all to take effect anyway.
     public static final Item FLUORITE_HELMET = registerItem("fluorite_helmet",
-            new ArmorItem(ModArmorMaterials.FLUORITE_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings().maxDamage(ArmorItem.Type.HELMET.getMaxDamage(15))));
-
+            new ModArmorItem(ModArmorMaterials.FLUORITE_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings().maxDamage(ArmorItem.Type.HELMET.getMaxDamage(15))));
     public static final Item FLUORITE_CHESTPLATE = registerItem("fluorite_chestplate",
             new ArmorItem(ModArmorMaterials.FLUORITE_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Settings().maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(15))));
-
     public static final Item FLUORITE_LEGGINGS = registerItem("fluorite_leggings",
             new ArmorItem(ModArmorMaterials.FLUORITE_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Settings().maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(15))));
-
     public static final Item FLUORITE_BOOTS = registerItem("fluorite_boots",
             new ArmorItem(ModArmorMaterials.FLUORITE_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings().maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(15))));
 
+    public static final Item FLUORITE_HORSE_ARMOR = registerItem("fluorite_horse_armor",
+            new AnimalArmorItem(ModArmorMaterials.FLUORITE_ARMOR_MATERIAL, AnimalArmorItem.Type.EQUESTRIAN, false, new Item.Settings()));
 
 
-    public static Item registerItem(String name, Item item){
+    public static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(MCCourseMod.MOD_ID, name), item);
     }
 
@@ -83,7 +81,7 @@ public class ModItems {
         entries.add(RAW_FLUORITE);
     }
 
-    public static void registerModItems(){
+    public static void registerModItems() {
         MCCourseMod.LOGGER.info("Registering Mod Items for " + MCCourseMod.MOD_ID);
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItems::customIngredients);
