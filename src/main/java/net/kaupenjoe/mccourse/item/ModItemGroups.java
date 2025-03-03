@@ -36,7 +36,10 @@ public class ModItemGroups {
                         entries.add(ModItems.FLUORITE_LEGGINGS);
                         entries.add(ModItems.FLUORITE_BOOTS);
                         entries.add(ModItems.FLUORITE_HORSE_ARMOR);
-                        entries.add(ModItems.KAUPEN_SMITHING_TEMPLATE); 
+                        entries.add(ModItems.KAUPEN_SMITHING_TEMPLATE);
+
+                        entries.add(ModItems.DATA_TABLET);
+                        entries.add(ModItems.METAL_DETECTOR);
     }).build());
 
     public static final ItemGroup FLUORITE_BLOCK_GROUP = Registry.register(Registries.ITEM_GROUP,

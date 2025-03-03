@@ -17,6 +17,8 @@
   "item.mccourse.fluorite_leggings": "Fluorite Leggings",
   "item.mccourse.fluorite_horse_armor": "Fluorite Horse Armor",
   "item.mccourse.kaupen_armor_trim_smithing_template": "Kaupen Smithing Template",
+  "item.mccourse.data_tablet": "Data Tablet",
+  "item.mccourse.metal_detector": "Metal Detector",
   "block.mccourse.fluorite_block": "Fluorite Block",
   "block.mccourse.fluorite_ore": "Fluorite Ore",
   "block.mccourse.fluorite_deepslate_ore": "Fluorite Deepslate Ore",
@@ -41,5 +43,6 @@
   "tooltip.mccourse.magic_block": "This block is §9magical§r!",
   "tooltip.mccourse.strawberry.tooltip.1": "Tastes great!",
   "trim_material.mccourse.fluorite": "Fluorite Material",
-  "trim_pattern.mccourse.kaupen": "Kaupen Armor Pattern"
+  "trim_pattern.mccourse.kaupen": "Kaupen Armor Pattern",
+  "item.mccourse.metaldetector.no_valuables": "No Valuables Found!"
 }
