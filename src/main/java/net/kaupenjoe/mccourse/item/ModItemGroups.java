@@ -3,6 +3,7 @@ package net.kaupenjoe.mccourse.item;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.kaupenjoe.mccourse.MCCourseMod;
 import net.kaupenjoe.mccourse.block.ModBlocks;
+import net.kaupenjoe.mccourse.block.custom.FluoriteLampBlock;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
@@ -57,6 +58,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.FLUORITE_WALL);
                         entries.add(ModBlocks.FLUORITE_DOOR);
                         entries.add(ModBlocks.FLUORITE_TRAPDOOR);
+                        entries.add(ModBlocks.FLUORITE_LAMP);
                     }).build());
     public static void registerItemGroups(){
         MCCourseMod.LOGGER.info("Registering Item Groups for " + MCCourseMod.MOD_ID);
