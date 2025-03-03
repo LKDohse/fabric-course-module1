@@ -2,6 +2,7 @@ package net.kaupenjoe.mccourse.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+import net.kaupenjoe.mccourse.MCCourseMod;
 import net.kaupenjoe.mccourse.block.ModBlocks;
 import net.kaupenjoe.mccourse.item.ModItems;
 import net.minecraft.block.Blocks;
@@ -13,6 +14,7 @@ import net.minecraft.recipe.Recipe;
 import net.minecraft.recipe.ShapedRecipe;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.util.Identifier;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -130,6 +132,8 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .input('F', ModItems.FLUORITE)
                 .criterion(hasItem(ModItems.FLUORITE), conditionsFromItem(ModItems.FLUORITE))
                 .offerTo(recipeExporter);
+
+        offerSmithingTrimRecipe(recipeExporter, ModItems.KAUPEN_SMITHING_TEMPLATE, Identifier.of(MCCourseMod.MOD_ID, "kaupen"));
 
     }
 
