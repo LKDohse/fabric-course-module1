@@ -23,6 +23,7 @@
   "item.mccourse.strawberry_seeds": "Strawberry Seeds",
   "item.mccourse.bar_brawl_music_disc": "Bar Brawl Music Disc",
   "item.mccourse.bar_brawl_music_disc.desc": "Bryan Tech - Bar Brawl (CCB)",
+  "item.mccourse.spectre_staff": "Spectre Staff",
 
   "block.mccourse.dahlia": "Dahlia",
   "block.mccourse.fluorite_block": "Fluorite Block",
@@ -41,6 +42,7 @@
   "block.mccourse.fluorite_door": "Fluorite Door",
   "block.mccourse.fluorite_trapdoor": "Fluorite Trapdoor",
   "block.mccourse.fluorite_lamp": "Fluorite Lamp",
+  "block.mccourse.pedestal": "Pedestal",
   "itemgroup.fluorite": "Fluorite Items",
   "itemgroup.fluorite_blocks": "Fluorite Blocks",
   "tooltip.mccourse.chainsaw.tooltip.shift": "Press §eShift§r for more information!",

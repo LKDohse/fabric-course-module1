@@ -47,6 +47,8 @@ public class ModItemGroups {
 
                         entries.add(ModItems.BAR_BRAWL_MUSIC_DISC);
 
+                        entries.add(ModItems.SPECTRE_STAFF);
+
     }).build());
 
     public static final ItemGroup FLUORITE_BLOCK_GROUP = Registry.register(Registries.ITEM_GROUP,

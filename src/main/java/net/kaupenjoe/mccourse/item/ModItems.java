@@ -88,6 +88,9 @@ public class ModItems {
 
     public static final Item BAR_BRAWL_MUSIC_DISC = registerItem("bar_brawl_music_disc",
             new Item(new Item.Settings().jukeboxPlayable(ModSounds.BAR_BRAWL_KEY)));
+
+    public static final Item SPECTRE_STAFF = registerItem("spectre_staff",
+            new Item(new Item.Settings().maxCount(1)));
     public static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(MCCourseMod.MOD_ID, name), item);
     }
