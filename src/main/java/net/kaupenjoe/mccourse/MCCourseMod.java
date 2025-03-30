@@ -15,6 +15,7 @@ import net.kaupenjoe.mccourse.event.AttackEntityHandler;
 import net.kaupenjoe.mccourse.event.PlayerCopyHandler;
 import net.kaupenjoe.mccourse.item.ModItemGroups;
 import net.kaupenjoe.mccourse.item.ModItems;
+import net.kaupenjoe.mccourse.sound.ModSounds;
 import net.kaupenjoe.mccourse.util.HammerUsageEvent;
 import net.minecraft.block.ComposterBlock;
 import org.slf4j.Logger;
@@ -30,6 +31,7 @@ public class MCCourseMod implements ModInitializer {
         ModItemGroups.registerItemGroups();
         ModBlocks.registerModBlocks();
         ModDataComponentTypes.registerDataComponentTypes();
+        ModSounds.registerSounds();
 
         FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES, 600);
         ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.STRAWBERRY, 0.5f);
