@@ -77,6 +77,9 @@ public class ModItems {
     public static final Item METAL_DETECTOR = registerItem("metal_detector", new MetalDetectorItem(new Item.Settings().maxDamage(200)));
     public static final Item DATA_TABLET = registerItem("data_tablet", new DataTabletItem(new Item.Settings().maxCount(1)));
 
+    public static final Item KAUPEN_BOW = registerItem("kaupen_bow",
+    new BowItem(new Item.Settings().maxDamage(200)));
+
     public static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(MCCourseMod.MOD_ID, name), item);
     }
