@@ -42,6 +42,8 @@ public class ModItemGroups {
                         entries.add(ModItems.METAL_DETECTOR);
 
                         entries.add(ModItems.KAUPEN_BOW);
+
+                        entries.add(ModItems.STRAWBERRY_SEEDS);
     }).build());
 
     public static final ItemGroup FLUORITE_BLOCK_GROUP = Registry.register(Registries.ITEM_GROUP,

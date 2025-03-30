@@ -1,4 +1,4 @@
-// 1.21.1	2025-03-02T22:36:19.8232116	mccourse/Block Loot Tables
+// 1.21.1	2025-03-29T23:07:59.2373996	mccourse/Block Loot Tables
 a31857ab8b8ff379b6726cca5a45cc7b943f7c6e data\mccourse\loot_table\blocks\fluorite_block.json
 8069c5f53def1734ad924dcef5fefbcfaaa2c0e4 data\mccourse\loot_table\blocks\fluorite_button.json
 b6049382f344ae9b7e3458dad4836691ce9eca45 data\mccourse\loot_table\blocks\fluorite_ore.json
@@ -8,6 +8,7 @@ f5b6b3c27e2daed548bbcf3cfb87197c1acee0f1 data\mccourse\loot_table\blocks\fluorit
 60f740f388576883f0718825e572def542232ddd data\mccourse\loot_table\blocks\fluorite_nether_ore.json
 127aa2b6adcc5f7032b5ba86e18e42f75e77def7 data\mccourse\loot_table\blocks\fluorite_pressure_plate.json
 2827bb4b5d08ab84441d3f847fa5281c30599e5b data\mccourse\loot_table\blocks\fluorite_trapdoor.json
+957d61f386464da1d3dcf43e6f4b7e8fc34d9ba6 data\mccourse\loot_table\blocks\strawberry_crop.json
 f8ab0d072bc63cf1be0cf393e30cc0e75a90f725 data\mccourse\loot_table\blocks\fluorite_fence_gate.json
 90be45827cf20de79bb983a809ad66ea2ace877f data\mccourse\loot_table\blocks\fluorite_lamp.json
 cf11af404804b1b71ac21f26bbf6c1ea52ef294c data\mccourse\loot_table\blocks\fluorite_fence.json
