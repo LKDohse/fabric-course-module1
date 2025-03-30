@@ -3,6 +3,7 @@ package net.kaupenjoe.mccourse.block;
 import net.kaupenjoe.mccourse.MCCourseMod;
 import net.kaupenjoe.mccourse.block.custom.FluoriteLampBlock;
 import net.kaupenjoe.mccourse.block.custom.MagicBlock;
+import net.kaupenjoe.mccourse.block.custom.PedestalBlock;
 import net.kaupenjoe.mccourse.block.custom.StrawberryCropBlock;
 import net.kaupenjoe.mccourse.sound.ModSounds;
 import net.minecraft.block.*;
@@ -87,6 +88,9 @@ public class ModBlocks {
 
     public static final Block COLORED_LEAVES = registerBlock("colored_leaves",
             new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES)));
+
+    public static final Block PEDESTAL = registerBlock("pedestal",
+            new PedestalBlock(AbstractBlock.Settings.create().strength(4f).requiresTool().nonOpaque()));
 
     private static Block registerBlock(String name, Block block) {
        registerBlockItem(name, block);

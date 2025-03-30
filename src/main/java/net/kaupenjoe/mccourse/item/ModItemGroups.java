@@ -71,6 +71,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.FLUORITE_LAMP);
                         entries.add(ModBlocks.DAHLIA);
                         entries.add(ModBlocks.COLORED_LEAVES);
+                        entries.add(ModBlocks.PEDESTAL);
                     }).build());
     public static void registerItemGroups(){
         MCCourseMod.LOGGER.info("Registering Item Groups for " + MCCourseMod.MOD_ID);
