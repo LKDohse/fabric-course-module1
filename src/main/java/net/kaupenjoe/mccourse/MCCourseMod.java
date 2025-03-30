@@ -11,6 +11,7 @@ import net.kaupenjoe.mccourse.block.ModBlocks;
 import net.kaupenjoe.mccourse.command.ReturnHomeCommand;
 import net.kaupenjoe.mccourse.command.SetHomeCommand;
 import net.kaupenjoe.mccourse.components.ModDataComponentTypes;
+import net.kaupenjoe.mccourse.effect.ModEffects;
 import net.kaupenjoe.mccourse.event.AttackEntityHandler;
 import net.kaupenjoe.mccourse.event.PlayerCopyHandler;
 import net.kaupenjoe.mccourse.item.ModItemGroups;
@@ -32,6 +33,7 @@ public class MCCourseMod implements ModInitializer {
         ModBlocks.registerModBlocks();
         ModDataComponentTypes.registerDataComponentTypes();
         ModSounds.registerSounds();
+        ModEffects.registerEffects();
 
         FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES, 600);
         ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.STRAWBERRY, 0.5f);
