@@ -40,5 +40,13 @@
     "sounds": [
       "mccourse:magic_block_step"
     ]
-  }
+  },
+  "bar_brawl": {
+  "sounds": [
+    {
+      "name":"mccourse:bar_brawl",
+      "stream": true
+    }
+  ]
+}
 }
