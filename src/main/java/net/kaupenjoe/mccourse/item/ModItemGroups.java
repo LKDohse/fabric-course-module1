@@ -44,6 +44,7 @@ public class ModItemGroups {
                         entries.add(ModItems.KAUPEN_BOW);
 
                         entries.add(ModItems.STRAWBERRY_SEEDS);
+
     }).build());
 
     public static final ItemGroup FLUORITE_BLOCK_GROUP = Registry.register(Registries.ITEM_GROUP,
@@ -66,6 +67,8 @@ public class ModItemGroups {
                         entries.add(ModBlocks.FLUORITE_DOOR);
                         entries.add(ModBlocks.FLUORITE_TRAPDOOR);
                         entries.add(ModBlocks.FLUORITE_LAMP);
+                        entries.add(ModBlocks.DAHLIA);
+                        entries.add(ModBlocks.COLORED_LEAVES);
                     }).build());
     public static void registerItemGroups(){
         MCCourseMod.LOGGER.info("Registering Item Groups for " + MCCourseMod.MOD_ID);

@@ -50,6 +50,8 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.FLUORITE_TRAPDOOR);
 
         addDrop(ModBlocks.FLUORITE_LAMP);
+        addDrop(ModBlocks.DAHLIA);
+        addDrop(ModBlocks.POTTED_DAHLIA, pottedPlantDrops(ModBlocks.DAHLIA));
 
         BlockStatePropertyLootCondition.Builder builder = BlockStatePropertyLootCondition.builder(ModBlocks.STRAWBERRY_CROP)
                 .properties(StatePredicate.Builder.create().exactMatch(StrawberryCropBlock.AGE, 5));
