@@ -4,6 +4,7 @@ import net.kaupenjoe.mccourse.MCCourseMod;
 import net.kaupenjoe.mccourse.block.custom.FluoriteLampBlock;
 import net.kaupenjoe.mccourse.block.custom.MagicBlock;
 import net.kaupenjoe.mccourse.block.custom.StrawberryCropBlock;
+import net.kaupenjoe.mccourse.sound.ModSounds;
 import net.minecraft.block.*;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
@@ -42,7 +43,7 @@ public class ModBlocks {
 
     public static final Block MAGIC_BLOCK = registerBlock("magic_block",
             new MagicBlock(AbstractBlock.Settings.create()
-                    .strength(4f).requiresTool()));
+                    .strength(4f).requiresTool().sounds(ModSounds.MAGIC_BLOCK_SOUNDS)));
 
     public static final Block FLUORITE_STAIRS = registerBlock("fluorite_stairs",
             new StairsBlock(ModBlocks.FLUORITE_BLOCK.getDefaultState(),
