@@ -75,5 +75,7 @@
   "item.mccourse.metaldetector.no_valuables": "No Valuables Found!",
   "sounds.mccourse.chainsaw_cut": "Chainsaw cutting sounds",
   "sounds.mccourse.chainsaw_pull": "Chainsaw pull sound",
-  "effect.mccourse.slimy": "Slimy"
+  "effect.mccourse.slimy": "Slimy",
+
+  "enchantment.mccourse.lightning_striker": "Lightning Striker"
 }
