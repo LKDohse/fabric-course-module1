@@ -6,6 +6,8 @@ import net.kaupenjoe.mccourse.datagen.*;
 import net.kaupenjoe.mccourse.enchantment.ModEnchantments;
 import net.kaupenjoe.mccourse.trim.ModTrimMaterials;
 import net.kaupenjoe.mccourse.trim.ModTrimPatterns;
+import net.kaupenjoe.mccourse.world.ModConfiguredFeatures;
+import net.kaupenjoe.mccourse.world.ModPlacedFeatures;
 import net.minecraft.registry.RegistryBuilder;
 import net.minecraft.registry.RegistryKeys;
 
@@ -22,7 +24,7 @@ public class MccourseDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(ModRegistryDataGenerator::new);
 		pack.addProvider(ModPoiTagProvider::new);
 		pack.addProvider(ModFluidTagProvider::new);
-
+		pack.addProvider(ModWorldGenerator::new);
 	}
 
 	@Override
@@ -30,5 +32,8 @@ public class MccourseDataGenerator implements DataGeneratorEntrypoint {
 		registryBuilder.addRegistry(RegistryKeys.TRIM_MATERIAL, ModTrimMaterials::bootstrap);
 		registryBuilder.addRegistry(RegistryKeys.TRIM_PATTERN, ModTrimPatterns::bootstrap);
 		registryBuilder.addRegistry(RegistryKeys.ENCHANTMENT, ModEnchantments::bootstrap);
+		registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap);
+		registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, ModPlacedFeatures::bootstrap);
+
 	}
 }

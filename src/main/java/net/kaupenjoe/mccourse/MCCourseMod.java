@@ -12,6 +12,7 @@ import net.kaupenjoe.mccourse.block.ModBlocks;
 import net.kaupenjoe.mccourse.command.ReturnHomeCommand;
 import net.kaupenjoe.mccourse.command.SetHomeCommand;
 import net.kaupenjoe.mccourse.components.ModDataComponentTypes;
+import net.kaupenjoe.mccourse.datagen.ModWorldGenerator;
 import net.kaupenjoe.mccourse.effect.ModEffects;
 import net.kaupenjoe.mccourse.enchantment.ModEnchantmentEffects;
 import net.kaupenjoe.mccourse.event.AttackEntityHandler;
@@ -21,6 +22,7 @@ import net.kaupenjoe.mccourse.item.ModItems;
 import net.kaupenjoe.mccourse.potion.ModPotions;
 import net.kaupenjoe.mccourse.sound.ModSounds;
 import net.kaupenjoe.mccourse.villager.ModVillagers;
+import net.kaupenjoe.mccourse.world.gen.ModWorldGeneration;
 import net.minecraft.block.ComposterBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -45,6 +47,7 @@ public class MCCourseMod implements ModInitializer {
         ModEffects.registerEffects();
         ModPotions.registerPotions();
         ModEnchantmentEffects.registerEnchantmentEffects();
+        ModWorldGeneration.generateModWorldGeneration();
 
         FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES, 600);
         ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.STRAWBERRY, 0.5f);
