@@ -1,4 +1,4 @@
-// 1.21.1	2025-03-30T22:11:02.0262585	mccourse/Model Definitions
+// 1.21.1	2025-03-30T23:24:50.8042714	mccourse/Model Definitions
 faea40b98cbb7269c546a7d3e42c40858c74ad52 assets\mccourse\models\block\fluorite_door_top_left.json
 3309200ba5ffe491d9fe03c9e6ebfaeb1174c1c9 assets\mccourse\models\item\fluorite_boots_copper_trim.json
 1dd9bf7e5671d59ec87c0caf8ce2e2830172dce0 assets\mccourse\models\item\fluorite_door.json
@@ -82,8 +82,8 @@ f35fff872a15f425b9defdd8afb6d082ab26e0e6 assets\mccourse\models\item\fluorite_he
 6294b8b9a1bed05f7171c3d7f313ce6237335527 assets\mccourse\blockstates\fluorite_lamp.json
 fac5d28dfafaf4ed309fe8f9bd7013d25ee2114a assets\mccourse\blockstates\fluorite_slab.json
 1d58989995b5ab20033b1be69f48019708826037 assets\mccourse\models\item\fluorite_slab.json
-f9b91dcd506a1166fcbbe75419bafcda264de3d0 assets\mccourse\models\item\fluorite_end_ore.json
 0ba45fa0b9fa861a6995c3a85d8bc1c786ed1fa6 assets\mccourse\models\item\kaupen_armor_trim_smithing_template.json
+f9b91dcd506a1166fcbbe75419bafcda264de3d0 assets\mccourse\models\item\fluorite_end_ore.json
 34ce4e294d5bcd164c138e01f78c976a55eec6bb assets\mccourse\models\item\fluorite_leggings_emerald_trim.json
 acbe5f7c449be4df4b444142fe152ad69c6dc5cf assets\mccourse\models\item\fluorite_lamp.json
 9983bb80a3099ac96a21d018fb09d81324adcb05 assets\mccourse\models\item\fluorite_axe.json
@@ -93,6 +93,7 @@ adbe7a61c857791ade77a5641ec904c25530d810 assets\mccourse\models\item\fluorite_le
 abe15c7d33d7a8c377b79ff8a57d04d1023779be assets\mccourse\models\block\fluorite_nether_ore.json
 bc626f9007aba2a36d3c2f8d21fa8c75546fee1c assets\mccourse\blockstates\strawberry_crop.json
 59959fb62ddd2234a1107a39fd066bfc0fdec6c7 assets\mccourse\models\block\fluorite_stairs_inner.json
+ccfc16cc068ba02ef66e4648cf91e8b6b5ca5699 assets\mccourse\models\item\fluorite_water_bucket.json
 03f4842030b2a99a217943abcea1f87d1d0c78b3 assets\mccourse\models\item\fluorite_chestplate_lapis_trim.json
 77f2e3e1ebf7ca2a617cdcac9faab72f16d804c8 assets\mccourse\models\item\fluorite_stairs.json
 b7d666bc87397258200dc27a96395ba532b6a945 assets\mccourse\models\block\fluorite_deepslate_ore.json

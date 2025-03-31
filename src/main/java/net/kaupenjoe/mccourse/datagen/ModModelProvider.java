@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.kaupenjoe.mccourse.block.ModBlocks;
 import net.kaupenjoe.mccourse.block.custom.FluoriteLampBlock;
 import net.kaupenjoe.mccourse.block.custom.StrawberryCropBlock;
+import net.kaupenjoe.mccourse.fluid.ModFluids;
 import net.kaupenjoe.mccourse.item.ModItems;
 import net.minecraft.data.client.*;
 import net.minecraft.item.ArmorItem;
@@ -75,5 +76,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.METAL_DETECTOR, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.BAR_BRAWL_MUSIC_DISC, Models.GENERATED);
+
+        itemModelGenerator.register(ModFluids.FLUORITE_WATER_BUCKET, Models.GENERATED);
     }
 }
