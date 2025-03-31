@@ -56,6 +56,9 @@
   "tooltip.mccourse.strawberry.tooltip.1": "Tastes great!",
   "trim_material.mccourse.fluorite": "Fluorite Material",
   "trim_pattern.mccourse.kaupen": "Kaupen Armor Pattern",
+
+  "entity.minecraft.villager.kaupenger": "Kaupenger",
+
   "item.mccourse.metaldetector.no_valuables": "No Valuables Found!",
   "sounds.mccourse.chainsaw_cut": "Chainsaw cutting sounds",
   "sounds.mccourse.chainsaw_pull": "Chainsaw pull sound",

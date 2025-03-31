@@ -19,6 +19,7 @@ import net.kaupenjoe.mccourse.item.ModItemGroups;
 import net.kaupenjoe.mccourse.item.ModItems;
 import net.kaupenjoe.mccourse.potion.ModPotions;
 import net.kaupenjoe.mccourse.sound.ModSounds;
+import net.kaupenjoe.mccourse.villager.ModVillagers;
 import net.minecraft.block.ComposterBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -51,6 +52,7 @@ public class MCCourseMod implements ModInitializer {
             builder.registerPotionRecipe(Potions.AWKWARD, Items.SLIME_BALL, ModPotions.SLIMY_POTION);
         });
 
+        ModVillagers.registerVillagers();
         registerCustomTrades();
 
         //PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent()); //this is causing a bug where you can't break any blocks
@@ -77,6 +79,19 @@ public class MCCourseMod implements ModInitializer {
                     new TradedItem(Items.DIAMOND, 6),
                     new ItemStack(ModItems.FLUORITE, 19), 4, 1, 0.04f
             )));
+        });
+
+
+        TradeOfferHelper.registerVillagerOffers(ModVillagers.KAUPENGER, 1, factories -> {
+            factories.add((entity, random) -> new TradeOffer(
+                    new TradedItem(Items.DIAMOND, 6),
+                    new ItemStack(ModItems.RAW_FLUORITE, 19), 4, 1, 0.04f
+            ));
+
+            factories.add((entity, random) -> new TradeOffer(
+                    new TradedItem(ModItems.FLUORITE, 6),
+                    new ItemStack(ModItems.SPECTRE_STAFF, 1), 1, 8, 0.04f
+            ));
         });
     }
 }

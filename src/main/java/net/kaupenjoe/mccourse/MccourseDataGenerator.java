@@ -19,6 +19,7 @@ public class MccourseDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(ModModelProvider::new);
 		pack.addProvider(ModRecipeGenerator::new);
 		pack.addProvider(ModRegistryDataGenerator::new);
+		pack.addProvider(ModPoiTagProvider::new);
 
 	}
 
