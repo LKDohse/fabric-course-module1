@@ -108,7 +108,7 @@ public class ModBlocks {
             new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES)));
 
     public static final Block BLACKWOOD_SAPLING = registerBlock("blackwood_sapling",
-            new SaplingBlock(ModSaplingGenerators.BLACKWOOD, AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)));
+            new ModSapplingBlock(ModSaplingGenerators.BLACKWOOD, AbstractBlock.Settings.copy(Blocks.OAK_SAPLING), Blocks.END_STONE));
 
     public static final Block BLACKWOOD_STAIRS = registerBlock("blackwood_stairs",
             new StairsBlock(ModBlocks.BLACKWOOD_PLANKS.getDefaultState(),
