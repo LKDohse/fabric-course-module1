@@ -39,7 +39,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerDoor(ModBlocks.FLUORITE_DOOR);
         blockStateModelGenerator.registerTrapdoor(ModBlocks.FLUORITE_TRAPDOOR);
 
-        blockStateModelGenerator.registerCrop(ModBlocks.STRAWBERRY_CROP, StrawberryCropBlock.AGE, 0,1,2,3,4,5);
+        blockStateModelGenerator.registerCrop(ModBlocks.STRAWBERRY_CROP, StrawberryCropBlock.AGE, 0, 1, 2, 3, 4, 5);
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.DAHLIA, ModBlocks.POTTED_DAHLIA, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerSingleton(ModBlocks.COLORED_LEAVES, TexturedModel.LEAVES);
 
@@ -49,6 +49,23 @@ public class ModModelProvider extends FabricModelProvider {
                 .coordinate(BlockStateModelGenerator.createBooleanModelMap(FluoriteLampBlock.CLICKED, lampOnIdentifier, lampOffIdentifier)));
 
         blockStateModelGenerator.registerNorthDefaultHorizontalRotated(ModBlocks.CRYSTALLIZER, TexturedModel.ORIENTABLE);
+
+        blockStateModelGenerator.registerLog(ModBlocks.BLACKWOOD_LOG).log(ModBlocks.BLACKWOOD_LOG).wood(ModBlocks.BLACKWOOD_WOOD);
+        blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_BLACKWOOD_LOG).log(ModBlocks.STRIPPED_BLACKWOOD_LOG).wood(ModBlocks.STRIPPED_BLACKWOOD_WOOD);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BLACKWOOD_PLANKS);
+        blockStateModelGenerator.registerSingleton(ModBlocks.BLACKWOOD_LEAVES, TexturedModel.LEAVES);
+        blockStateModelGenerator.registerTintableCrossBlockState(ModBlocks.BLACKWOOD_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+
+//        BlockStateModelGenerator.BlockTexturePool blackwoodTexturePool =
+//                blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.BLACKWOOD_PLANKS);
+
+//        blackwoodTexturePool.stairs(ModBlocks.FLUORITE_STAIRS);
+//        blackwoodTexturePool.slab(ModBlocks.FLUORITE_SLAB);
+//        blackwoodTexturePool.button(ModBlocks.FLUORITE_BUTTON);
+//        blackwoodTexturePool.pressurePlate(ModBlocks.FLUORITE_PRESSURE_PLATE);
+//        blackwoodTexturePool.fence(ModBlocks.FLUORITE_FENCE);
+//        blackwoodTexturePool.fenceGate(ModBlocks.FLUORITE_FENCE_GATE);
+//        blackwoodTexturePool.wall(ModBlocks.FLUORITE_WALL);
     }
 
     @Override
@@ -67,10 +84,10 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.FLUORITE_PAXEL, Models.HANDHELD);
         itemModelGenerator.register(ModItems.FLUORITE_HAMMER, Models.HANDHELD);
 
-        itemModelGenerator.registerArmor((ArmorItem)ModItems.FLUORITE_HELMET);
-        itemModelGenerator.registerArmor((ArmorItem)ModItems.FLUORITE_CHESTPLATE);
-        itemModelGenerator.registerArmor((ArmorItem)ModItems.FLUORITE_LEGGINGS);
-        itemModelGenerator.registerArmor((ArmorItem)ModItems.FLUORITE_BOOTS);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.FLUORITE_HELMET);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.FLUORITE_CHESTPLATE);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.FLUORITE_LEGGINGS);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.FLUORITE_BOOTS);
 
         itemModelGenerator.register(ModItems.FLUORITE_HORSE_ARMOR, Models.GENERATED);
         itemModelGenerator.register(ModItems.KAUPEN_SMITHING_TEMPLATE, Models.GENERATED);

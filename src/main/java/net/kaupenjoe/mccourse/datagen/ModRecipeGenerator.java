@@ -135,6 +135,8 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
 
         offerSmithingTrimRecipe(recipeExporter, ModItems.KAUPEN_SMITHING_TEMPLATE, Identifier.of(MCCourseMod.MOD_ID, "kaupen"));
 
+
+
     }
 
 }
