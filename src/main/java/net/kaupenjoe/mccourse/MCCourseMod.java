@@ -14,7 +14,6 @@ import net.kaupenjoe.mccourse.block.ModBlocks;
 import net.kaupenjoe.mccourse.command.ReturnHomeCommand;
 import net.kaupenjoe.mccourse.command.SetHomeCommand;
 import net.kaupenjoe.mccourse.components.ModDataComponentTypes;
-import net.kaupenjoe.mccourse.datagen.ModWorldGenerator;
 import net.kaupenjoe.mccourse.effect.ModEffects;
 import net.kaupenjoe.mccourse.enchantment.ModEnchantmentEffects;
 import net.kaupenjoe.mccourse.event.AttackEntityHandler;

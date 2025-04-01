@@ -1,4 +1,4 @@
-// 1.21.1	2025-03-31T23:05:56.727441	mccourse/Model Definitions
+// 1.21.1	2025-04-01T12:57:12.3788109	mccourse/Model Definitions
 0d3227cf6230af2fdb60239d95715660695be77d assets\mccourse\models\block\blackwood_door_bottom_right_open.json
 1dd9bf7e5671d59ec87c0caf8ce2e2830172dce0 assets\mccourse\models\item\fluorite_door.json
 930f82d5a5bd6727fe1f152cf739bc366d6dd858 assets\mccourse\models\item\fluorite_chestplate_diamond_trim.json
@@ -159,8 +159,8 @@ e669820a0ae72ec6fa3afc28fb183ff147f63b92 assets\mccourse\models\block\fluorite_d
 d4ee39afb5e8982eaf3cdcbca768326104b979dd assets\mccourse\models\block\fluorite_fence_gate_open.json
 267d38964ba6385ef28dfd17bb6782ae9ea7c6eb assets\mccourse\models\item\fluorite_chestplate_gold_trim.json
 053c457e20998e0cbd0cf7fb8d972de6aa4b436b assets\mccourse\models\item\stripped_blackwood_wood.json
-bb7223ce1a820ad3c67f2b7f68208a46627a58d8 assets\mccourse\models\item\fluorite_leggings_gold_trim.json
 d251b212acfafa8570ca920983867fdec353ab11 assets\mccourse\models\block\crystallizer.json
+bb7223ce1a820ad3c67f2b7f68208a46627a58d8 assets\mccourse\models\item\fluorite_leggings_gold_trim.json
 c9c009bbd53cde66b755d284aa86ec0cab4efa36 assets\mccourse\models\item\fluorite_helmet_redstone_trim.json
 a2a62dc955985fbff6917eeec629c5e5d72d5a25 assets\mccourse\models\item\blackwood_trapdoor.json
 370bb17deeb36c83225b692b78902a12ca210d57 assets\mccourse\models\item\crystallizer.json
