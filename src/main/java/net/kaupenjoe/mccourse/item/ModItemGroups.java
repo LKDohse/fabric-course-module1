@@ -84,6 +84,15 @@ public class ModItemGroups {
                         entries.add(ModBlocks.BLACKWOOD_LEAVES);
                         entries.add(ModBlocks.BLACKWOOD_PLANKS);
                         entries.add(ModBlocks.BLACKWOOD_SAPLING);
+                        entries.add(ModBlocks.BLACKWOOD_STAIRS);
+                        entries.add(ModBlocks.BLACKWOOD_SLAB);
+                        entries.add(ModBlocks.BLACKWOOD_PRESSURE_PLATE);
+                        entries.add(ModBlocks.BLACKWOOD_BUTTON);
+                        entries.add(ModBlocks.BLACKWOOD_FENCE);
+                        entries.add(ModBlocks.BLACKWOOD_FENCE_GATE);
+                        entries.add(ModBlocks.BLACKWOOD_DOOR);
+                        entries.add(ModBlocks.BLACKWOOD_TRAPDOOR);
+                        entries.add(ModBlocks.BLACKWOOD_WALL);
                     }).build());
     public static void registerItemGroups(){
         MCCourseMod.LOGGER.info("Registering Item Groups for " + MCCourseMod.MOD_ID);

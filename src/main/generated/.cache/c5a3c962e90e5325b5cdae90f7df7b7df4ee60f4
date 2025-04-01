@@ -1,7 +1,8 @@
-// 1.21.1	2025-03-31T22:05:50.7700486	mccourse/Tags for minecraft:item
+// 1.21.1	2025-03-31T23:05:56.727441	mccourse/Tags for minecraft:item
 4604a2436b1811e8f84815fe50ec8cf9deaa453a data\minecraft\tags\item\trim_templates.json
 f47b9f1d92280907d6167a544a50c41c1fce1788 data\minecraft\tags\item\trim_materials.json
 a3dd2be9543f1d3d65745189df75bdc89374c135 data\mccourse\tags\item\transformable_items.json
+454e5d1dc8510538831161389241db31c659af44 data\mccourse\tags\item\can_blackwood_plank.json
 39767b6cbff598797ba651948a4667315c10a861 data\minecraft\tags\item\trimmable_armor.json
 a824aa6cb027a271750dca44fec8249c12185a72 data\minecraft\tags\item\planks.json
 454e5d1dc8510538831161389241db31c659af44 data\minecraft\tags\item\logs_that_burn.json

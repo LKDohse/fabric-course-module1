@@ -110,27 +110,27 @@ public class ModBlocks {
     public static final Block BLACKWOOD_SAPLING = registerBlock("blackwood_sapling",
             new SaplingBlock(ModSaplingGenerators.BLACKWOOD, AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)));
 
-//    public static final Block BLACKWOOD_STAIRS = registerBlock("blackwood_stairs",
-//            new StairsBlock(ModBlocks.BLACKWOOD_PLANKS.getDefaultState(),
-//                    AbstractBlock.Settings.create().strength(2f).requiresTool()));
-//    public static final Block BLACKWOOD_SLAB = registerBlock("blackwood_slab",
-//            new SlabBlock(
-//                    AbstractBlock.Settings.create().strength(2f).requiresTool()));
-//    public static final Block BLACKWOOD_BUTTON = registerBlock("blackwood_button",
-//            new ButtonBlock(BlockSetType., 10, AbstractBlock.Settings.create().requiresTool()));
-//    public static final Block BLACKWOOD_PRESSURE_PLATE = registerBlock("blackwood_pressure_plate",
-//            new PressurePlateBlock(BlockSetType.IRON, AbstractBlock.Settings.create().requiresTool()));
-//    public static final Block BLACKWOOD_FENCE = registerBlock("blackwood_fence",
-//            new FenceBlock(AbstractBlock.Settings.create().requiresTool()));
-//    public static final Block BLACKWOOD_FENCE_GATE = registerBlock("blackwood_fence_gate",
-//            new FenceGateBlock(WoodType.ACACIA, AbstractBlock.Settings.create().requiresTool()));
-//    public static final Block BLACKWOOD_WALL = registerBlock("blackwood_wall",
-//            new WallBlock(AbstractBlock.Settings.create().requiresTool()));
-//    public static final Block BLACKWOOD_DOOR = registerBlock("blackwood_door",
-//            new DoorBlock(BlockSetType.IRON, AbstractBlock.Settings.create().requiresTool().nonOpaque()));
-//    public static final Block BLACKWOOD_TRAPDOOR = registerBlock("blackwood_trapdoor",
-//            new TrapdoorBlock(BlockSetType.IRON, AbstractBlock.Settings.create().requiresTool().nonOpaque()));
-//
+    public static final Block BLACKWOOD_STAIRS = registerBlock("blackwood_stairs",
+            new StairsBlock(ModBlocks.BLACKWOOD_PLANKS.getDefaultState(),
+                    AbstractBlock.Settings.create().strength(2f).requiresTool()));
+    public static final Block BLACKWOOD_SLAB = registerBlock("blackwood_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create().strength(2f).requiresTool()));
+    public static final Block BLACKWOOD_BUTTON = registerBlock("blackwood_button",
+            new ButtonBlock(BlockSetType.ACACIA, 10, AbstractBlock.Settings.create().requiresTool()));
+    public static final Block BLACKWOOD_PRESSURE_PLATE = registerBlock("blackwood_pressure_plate",
+            new PressurePlateBlock(BlockSetType.ACACIA, AbstractBlock.Settings.create().requiresTool()));
+    public static final Block BLACKWOOD_FENCE = registerBlock("blackwood_fence",
+            new FenceBlock(AbstractBlock.Settings.create().requiresTool()));
+    public static final Block BLACKWOOD_FENCE_GATE = registerBlock("blackwood_fence_gate",
+            new FenceGateBlock(WoodType.ACACIA, AbstractBlock.Settings.create().requiresTool()));
+    public static final Block BLACKWOOD_WALL = registerBlock("blackwood_wall",
+            new WallBlock(AbstractBlock.Settings.create().requiresTool()));
+    public static final Block BLACKWOOD_DOOR = registerBlock("blackwood_door",
+            new DoorBlock(BlockSetType.ACACIA, AbstractBlock.Settings.create().requiresTool().nonOpaque()));
+    public static final Block BLACKWOOD_TRAPDOOR = registerBlock("blackwood_trapdoor",
+            new TrapdoorBlock(BlockSetType.ACACIA, AbstractBlock.Settings.create().requiresTool().nonOpaque()));
+
 
 
     private static Block registerBlock(String name, Block block) {

@@ -52,20 +52,22 @@ public class ModModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerLog(ModBlocks.BLACKWOOD_LOG).log(ModBlocks.BLACKWOOD_LOG).wood(ModBlocks.BLACKWOOD_WOOD);
         blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_BLACKWOOD_LOG).log(ModBlocks.STRIPPED_BLACKWOOD_LOG).wood(ModBlocks.STRIPPED_BLACKWOOD_WOOD);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BLACKWOOD_PLANKS);
         blockStateModelGenerator.registerSingleton(ModBlocks.BLACKWOOD_LEAVES, TexturedModel.LEAVES);
         blockStateModelGenerator.registerTintableCrossBlockState(ModBlocks.BLACKWOOD_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
 
-//        BlockStateModelGenerator.BlockTexturePool blackwoodTexturePool =
-//                blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.BLACKWOOD_PLANKS);
+        BlockStateModelGenerator.BlockTexturePool blackwoodTexturePool =
+                blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.BLACKWOOD_PLANKS);
 
-//        blackwoodTexturePool.stairs(ModBlocks.FLUORITE_STAIRS);
-//        blackwoodTexturePool.slab(ModBlocks.FLUORITE_SLAB);
-//        blackwoodTexturePool.button(ModBlocks.FLUORITE_BUTTON);
-//        blackwoodTexturePool.pressurePlate(ModBlocks.FLUORITE_PRESSURE_PLATE);
-//        blackwoodTexturePool.fence(ModBlocks.FLUORITE_FENCE);
-//        blackwoodTexturePool.fenceGate(ModBlocks.FLUORITE_FENCE_GATE);
-//        blackwoodTexturePool.wall(ModBlocks.FLUORITE_WALL);
+        blackwoodTexturePool.stairs(ModBlocks.BLACKWOOD_STAIRS);
+        blackwoodTexturePool.slab(ModBlocks.BLACKWOOD_SLAB);
+        blackwoodTexturePool.button(ModBlocks.BLACKWOOD_BUTTON);
+        blackwoodTexturePool.pressurePlate(ModBlocks.BLACKWOOD_PRESSURE_PLATE);
+        blackwoodTexturePool.fence(ModBlocks.BLACKWOOD_FENCE);
+        blackwoodTexturePool.fenceGate(ModBlocks.BLACKWOOD_FENCE_GATE);
+        blackwoodTexturePool.wall(ModBlocks.BLACKWOOD_WALL);
+        blockStateModelGenerator.registerDoor(ModBlocks.BLACKWOOD_DOOR);
+        blockStateModelGenerator.registerTrapdoor(ModBlocks.BLACKWOOD_TRAPDOOR);
+
     }
 
     @Override

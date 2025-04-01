@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.kaupenjoe.mccourse.MCCourseMod;
 import net.kaupenjoe.mccourse.block.ModBlocks;
 import net.kaupenjoe.mccourse.item.ModItems;
+import net.kaupenjoe.mccourse.util.ModTags;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
@@ -135,8 +136,58 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
 
         offerSmithingTrimRecipe(recipeExporter, ModItems.KAUPEN_SMITHING_TEMPLATE, Identifier.of(MCCourseMod.MOD_ID, "kaupen"));
 
+        offerPlanksRecipe(recipeExporter, ModBlocks.BLACKWOOD_PLANKS, ModTags.Items.CAN_BLACKWOOD_PLANK, 4);
+        offerSlabRecipe(recipeExporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLACKWOOD_SLAB,ModBlocks.BLACKWOOD_PLANKS);
+        offerPressurePlateRecipe(recipeExporter, ModBlocks.BLACKWOOD_PRESSURE_PLATE,ModBlocks.BLACKWOOD_PLANKS);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLACKWOOD_STAIRS, 4)
+                .pattern("P  ")
+                .pattern("PP ")
+                .pattern("PPP")
+                .input('P', ModBlocks.BLACKWOOD_PLANKS)
+                .criterion(hasItem(ModBlocks.BLACKWOOD_PLANKS.asItem()), conditionsFromItem(ModBlocks.BLACKWOOD_PLANKS.asItem()))
+                .offerTo(recipeExporter);
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLACKWOOD_DOOR, 2)
+                .pattern("PP ")
+                .pattern("PP ")
+                .pattern("PP ")
+                .input('P', ModBlocks.BLACKWOOD_PLANKS)
+                .criterion(hasItem(ModBlocks.BLACKWOOD_PLANKS.asItem()), conditionsFromItem(ModBlocks.BLACKWOOD_PLANKS.asItem()))
+                .offerTo(recipeExporter);
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLACKWOOD_BUTTON,2)
+                .pattern("   ")
+                .pattern(" P ")
+                .pattern("   ")
+                .input('P', ModBlocks.BLACKWOOD_PLANKS)
+                .criterion(hasItem(ModBlocks.BLACKWOOD_PLANKS.asItem()), conditionsFromItem(ModBlocks.BLACKWOOD_PLANKS.asItem()))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLACKWOOD_FENCE, 4)
+                .pattern("   ")
+                .pattern("PSP")
+                .pattern("PSP")
+                .input('P', ModBlocks.BLACKWOOD_PLANKS)
+                .input('S', Items.STICK)
+                .criterion(hasItem(ModBlocks.BLACKWOOD_PLANKS.asItem()), conditionsFromItem(ModBlocks.BLACKWOOD_PLANKS.asItem()))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLACKWOOD_FENCE_GATE,2)
+                .pattern("   ")
+                .pattern("SPS")
+                .pattern("SPS")
+                .input('P', ModBlocks.BLACKWOOD_PLANKS)
+                .input('S', Items.STICK)
+                .criterion(hasItem(ModBlocks.BLACKWOOD_PLANKS.asItem()), conditionsFromItem(ModBlocks.BLACKWOOD_PLANKS.asItem()))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLACKWOOD_TRAPDOOR, 2)
+                .pattern("   ")
+                .pattern("PPP")
+                .pattern("PPP")
+                .input('P', ModBlocks.BLACKWOOD_PLANKS)
+                .criterion(hasItem(ModBlocks.BLACKWOOD_PLANKS.asItem()), conditionsFromItem(ModBlocks.BLACKWOOD_PLANKS.asItem()))
+                .offerTo(recipeExporter);
     }
 
 }

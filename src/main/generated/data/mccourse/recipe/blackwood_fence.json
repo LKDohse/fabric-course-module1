@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "P": {
+      "item": "mccourse:blackwood_planks"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "   ",
+    "PSP",
+    "PSP"
+  ],
+  "result": {
+    "count": 4,
+    "id": "mccourse:blackwood_fence"
+  }
+}

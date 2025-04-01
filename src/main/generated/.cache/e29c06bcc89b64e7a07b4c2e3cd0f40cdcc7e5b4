@@ -1,10 +1,10 @@
-// 1.21.1	2025-03-31T22:05:50.7730402	mccourse/Tags for minecraft:block
-f7195f176d8f383d5dafa778fccf8c74db194eac data\minecraft\tags\block\fence_gates.json
+// 1.21.1	2025-03-31T23:05:56.7308759	mccourse/Tags for minecraft:block
+2854c70096ca0f17829a435fd08f1c104b5333a0 data\minecraft\tags\block\fence_gates.json
 454e5d1dc8510538831161389241db31c659af44 data\minecraft\tags\block\logs_that_burn.json
 2a046c35b5bca2834418f37e1b840513033cb189 data\minecraft\tags\block\needs_iron_tool.json
-dc1b4409beff154ab683281af6c24167fc0ed0e7 data\minecraft\tags\block\walls.json
+bc6b99f2815d77d5704dc50dfcf55f13cc98f57b data\minecraft\tags\block\walls.json
 c4e47c707ad6508b9bc31851fabb162942f39b56 data\minecraft\tags\block\mineable\pickaxe.json
 c2f6fb7224bd1e2fdb87249751113c4d66dbc21f data\mccourse\tags\block\hammer_mineable.json
 690845cdb3123230db3a20d6685f2dc76de8f71c data\minecraft\tags\block\needs_diamond_tool.json
-470bec0afd29fe43bf1667ea283e1706164ea4be data\minecraft\tags\block\fences.json
+08caafbf9325c1d13cdcb8370aec8870d2ac2894 data\minecraft\tags\block\fences.json
 82362cfbd1836db13c7e9d36c8712821e795ac55 data\mccourse\tags\block\paxel_mineable.json

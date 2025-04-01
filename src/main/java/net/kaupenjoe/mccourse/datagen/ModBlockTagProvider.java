@@ -39,13 +39,16 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.FLUORITE_END_ORE);
 
         getOrCreateTagBuilder(BlockTags.WALLS)
-                .add(ModBlocks.FLUORITE_WALL);
+                .add(ModBlocks.FLUORITE_WALL)
+                .add(ModBlocks.BLACKWOOD_WALL);
 
         getOrCreateTagBuilder(BlockTags.FENCES)
-                .add(ModBlocks.FLUORITE_FENCE);
+                .add(ModBlocks.FLUORITE_FENCE)
+                .add(ModBlocks.BLACKWOOD_FENCE);
 
         getOrCreateTagBuilder(BlockTags.FENCE_GATES)
-                .add(ModBlocks.FLUORITE_FENCE_GATE);
+                .add(ModBlocks.FLUORITE_FENCE_GATE)
+                .add(ModBlocks.BLACKWOOD_FENCE_GATE);
 
         getOrCreateTagBuilder(ModTags.Blocks.PAXEL_MINEABLE)
                 .forceAddTag((BlockTags.PICKAXE_MINEABLE))
@@ -58,6 +61,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
         getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
                 .add(ModBlocks.BLACKWOOD_LOG, ModBlocks.BLACKWOOD_WOOD, ModBlocks.STRIPPED_BLACKWOOD_LOG, ModBlocks.STRIPPED_BLACKWOOD_WOOD);
+
 
     }
 }

@@ -64,6 +64,16 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
 
         addDrop(ModBlocks.BLACKWOOD_LEAVES, leavesDrops(ModBlocks.BLACKWOOD_LEAVES, ModBlocks.BLACKWOOD_SAPLING, 0.0625f));
 
+        addDrop(ModBlocks.BLACKWOOD_DOOR, doorDrops(ModBlocks.BLACKWOOD_DOOR));
+        addDrop(ModBlocks.BLACKWOOD_FENCE);
+        addDrop(ModBlocks.BLACKWOOD_FENCE_GATE);
+        addDrop(ModBlocks.BLACKWOOD_SLAB, slabDrops(ModBlocks.BLACKWOOD_SLAB));
+        addDrop(ModBlocks.BLACKWOOD_PRESSURE_PLATE);
+        addDrop(ModBlocks.BLACKWOOD_STAIRS);
+        addDrop(ModBlocks.BLACKWOOD_BUTTON);
+        addDrop(ModBlocks.BLACKWOOD_TRAPDOOR);
+        addDrop(ModBlocks.BLACKWOOD_WALL);
+
         BlockStatePropertyLootCondition.Builder builder = BlockStatePropertyLootCondition.builder(ModBlocks.STRAWBERRY_CROP)
                 .properties(StatePredicate.Builder.create().exactMatch(StrawberryCropBlock.AGE, 5));
         this.addDrop(ModBlocks.STRAWBERRY_CROP, this.cropDrops(ModBlocks.STRAWBERRY_CROP, ModItems.STRAWBERRY, ModItems.STRAWBERRY_SEEDS, builder));

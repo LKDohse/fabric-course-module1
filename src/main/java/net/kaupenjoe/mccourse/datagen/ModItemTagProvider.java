@@ -44,5 +44,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
         getOrCreateTagBuilder(ItemTags.PLANKS)
                 .add(ModBlocks.BLACKWOOD_PLANKS.asItem());
+
+        getOrCreateTagBuilder(ModTags.Items.CAN_BLACKWOOD_PLANK)
+                .add(ModBlocks.BLACKWOOD_LOG.asItem(), ModBlocks.BLACKWOOD_WOOD.asItem(), ModBlocks.STRIPPED_BLACKWOOD_LOG.asItem(), ModBlocks.STRIPPED_BLACKWOOD_WOOD.asItem());
     }
 }
