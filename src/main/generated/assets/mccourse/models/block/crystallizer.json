@@ -1,8 +1,6 @@
 {
-  "parent": "minecraft:block/orientable",
+  "parent": "minecraft:block/cube_all",
   "textures": {
-    "front": "mccourse:block/crystallizer_front",
-    "side": "mccourse:block/crystallizer_side",
-    "top": "mccourse:block/crystallizer_top"
+    "all": "mccourse:block/crystallizer"
   }
 }
