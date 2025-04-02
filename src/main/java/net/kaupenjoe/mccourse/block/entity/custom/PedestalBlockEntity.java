@@ -1,9 +1,12 @@
 package net.kaupenjoe.mccourse.block.entity.custom;
 
+import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
 import net.kaupenjoe.mccourse.block.entity.ModBlockEntities;
+import net.kaupenjoe.mccourse.screen.custom.PedestalScreenHandler;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventories;
 import net.minecraft.inventory.Inventory;
 import net.minecraft.item.ItemStack;
@@ -12,11 +15,14 @@ import net.minecraft.network.listener.ClientPlayPacketListener;
 import net.minecraft.network.packet.Packet;
 import net.minecraft.network.packet.s2c.play.BlockEntityUpdateS2CPacket;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.screen.ScreenHandler;
+import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.text.Text;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 import org.jetbrains.annotations.Nullable;
 
-public class PedestalBlockEntity extends BlockEntity implements Inventory {
+public class PedestalBlockEntity extends BlockEntity implements Inventory, ExtendedScreenHandlerFactory<BlockPos> {
 
     private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(1, ItemStack.EMPTY);
     private float rotation = 0;
@@ -49,9 +55,7 @@ public class PedestalBlockEntity extends BlockEntity implements Inventory {
     @Override
     public ItemStack removeStack(int slot, int amount) {
         markDirty();
-        ItemStack stack = inventory.get(slot);
-        stack.decrement(amount);
-        return inventory.set(slot, stack);
+        return Inventories.removeStack(inventory, slot);
     }
 
     @Override
@@ -105,5 +109,22 @@ public class PedestalBlockEntity extends BlockEntity implements Inventory {
     @Override
     public NbtCompound toInitialChunkDataNbt(RegistryWrapper.WrapperLookup registryLookup) {
        return createNbt(registryLookup);
+    }
+
+    //Below methods are for adding GUI
+    @Override
+    public BlockPos getScreenOpeningData(ServerPlayerEntity serverPlayerEntity) {
+        return this.pos;
+    }
+
+    @Override
+    public Text getDisplayName() {
+        return Text.translatable("gui.mccourse.pedestal");
+    }
+
+    @Nullable
+    @Override
+    public ScreenHandler createMenu(int syncId, PlayerInventory playerInventory, PlayerEntity player) {
+        return new PedestalScreenHandler(syncId, playerInventory, this.pos);
     }
 }

@@ -9,8 +9,11 @@ import net.kaupenjoe.mccourse.block.ModBlocks;
 import net.kaupenjoe.mccourse.block.entity.ModBlockEntities;
 import net.kaupenjoe.mccourse.block.entity.renderer.PedestalBlockEntityRenderer;
 import net.kaupenjoe.mccourse.fluid.ModFluids;
+import net.kaupenjoe.mccourse.screen.ModScreenHandlers;
+import net.kaupenjoe.mccourse.screen.custom.PedestalScreen;
 import net.kaupenjoe.mccourse.util.ModModelPredicates;
 import net.minecraft.client.color.world.BiomeColors;
+import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.block.FluidRenderer;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
@@ -41,5 +44,7 @@ public class MccourseModClient implements ClientModInitializer {
                 BiomeColors.getFoliageColor(world, pos) : FoliageColors.getDefaultColor(), ModBlocks.COLORED_LEAVES);
         ColorProviderRegistry.ITEM.register((stack, tintIndex) -> FoliageColors.getDefaultColor(), ModBlocks.COLORED_LEAVES);
         ModModelPredicates.registerModelPredicates();
+
+        HandledScreens.register(ModScreenHandlers.PEDESTAL_SCREEN_HANDLER, PedestalScreen::new);
     }
 }

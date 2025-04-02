@@ -84,5 +84,6 @@
   "sounds.mccourse.chainsaw_pull": "Chainsaw pull sound",
   "effect.mccourse.slimy": "Slimy",
 
-  "enchantment.mccourse.lightning_striker": "Lightning Striker"
+  "enchantment.mccourse.lightning_striker": "Lightning Striker",
+  "gui.mccourse.pedestal": "Pedestal"
 }
