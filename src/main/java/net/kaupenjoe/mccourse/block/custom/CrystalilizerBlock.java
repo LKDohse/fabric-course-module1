@@ -15,9 +15,9 @@ import net.minecraft.particle.BlockStateParticleEffect;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.state.StateManager;
-import net.minecraft.util.Hand;
-import net.minecraft.util.ItemActionResult;
-import net.minecraft.util.ItemScatterer;
+import net.minecraft.state.property.DirectionProperty;
+import net.minecraft.state.property.Properties;
+import net.minecraft.util.*;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.random.Random;
@@ -25,6 +25,7 @@ import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 public class CrystalilizerBlock extends BlockWithEntity {
+    public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
     public static final MapCodec<CrystalilizerBlock> CODEC = createCodec(CrystalilizerBlock::new);
 
     public CrystalilizerBlock(Settings settings) {
@@ -37,7 +38,56 @@ public class CrystalilizerBlock extends BlockWithEntity {
         return CODEC;
     }
 
+    // HORIZONTAL FACING PIECE
 
+
+    @Nullable
+    @Override
+    public BlockState getPlacementState(ItemPlacementContext ctx) {
+        return this.getDefaultState().with(FACING, ctx.getHorizontalPlayerFacing().getOpposite());
+    }
+
+    @Override
+    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
+        builder.add(FACING);
+    }
+
+    @Override
+    protected BlockState rotate(BlockState state, BlockRotation rotation) {
+        return state.with(FACING, rotation.rotate(state.get(FACING)));
+    }
+
+    @Override
+    protected BlockState mirror(BlockState state, BlockMirror mirror) {
+        return state.rotate(mirror.getRotation(state.get(FACING)));
+    }
+
+    @Override
+    public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
+        BlockEntity blockEntity = world.getBlockEntity(pos);
+        if(blockEntity instanceof CrystallizerBlockEntity crystallizer) {
+            if (crystallizer.isCrafting()){
+                double xPos = pos.getX() + 0.5f;
+                double yPos = pos.getY() + 1.25f;
+                double zPos = pos.getZ() + 0.5f;
+                double offset = random.nextDouble() * 0.6 - 0.3;
+
+                world.addParticle(ParticleTypes.SMOKE, xPos + offset, yPos, zPos + offset, 0.0, 0.0, 0.0);
+                world.addParticle(ParticleTypes.GLOW, xPos + offset, yPos, zPos + offset, 0.0, 0.0, 0.0);
+            }
+        }
+    /*
+    other examples
+     using items as particles
+     world.addParticle(new ItemStackParticleEffect(ParticleTypes.ITEM, Items.COOKED_BEEF.getDefaultStack()),
+     xPos + offset, yPos, zPos + offset, 0.0, 0.0, 0.0);
+    using blocks as particles
+            world.addParticle(new BlockStateParticleEffect(ParticleTypes.BLOCK,
+                    Blocks.DIAMOND_BLOCK.getDefaultState()), xPos + offset, yPos, zPos + offset, 0.0, 0.0, 0.0 );
+    */
+    }
+
+    // BLOCK ENTITY PIECE
     @Nullable
     @Override
     public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {

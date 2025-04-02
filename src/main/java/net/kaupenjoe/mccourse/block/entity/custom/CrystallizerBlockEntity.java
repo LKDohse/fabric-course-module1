@@ -17,6 +17,7 @@ import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.listener.ClientPlayPacketListener;
 import net.minecraft.network.packet.Packet;
 import net.minecraft.network.packet.s2c.play.BlockEntityUpdateS2CPacket;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
@@ -24,6 +25,7 @@ import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Text;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
@@ -111,7 +113,7 @@ public class CrystallizerBlockEntity extends BlockEntity implements ExtendedScre
 
     public void tick(World world, BlockPos pos, BlockState state) {
         //20 ticks per second
-        if (hasRecipe() && canInsertIntoOutputSlot()) {
+        if (isCrafting()) {
             increaseCraftingProgress();
             markDirty(world, pos, state);
 
@@ -123,6 +125,12 @@ public class CrystallizerBlockEntity extends BlockEntity implements ExtendedScre
             resetProgress();
         }
     }
+
+    public boolean isCrafting() {
+        return hasRecipe() && canInsertIntoOutputSlot();
+    }
+
+
 
     private void resetProgress() {
         this.progress = 0;
