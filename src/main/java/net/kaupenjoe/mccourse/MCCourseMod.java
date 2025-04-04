@@ -22,6 +22,7 @@ import net.kaupenjoe.mccourse.event.PlayerCopyHandler;
 import net.kaupenjoe.mccourse.item.ModItemGroups;
 import net.kaupenjoe.mccourse.item.ModItems;
 import net.kaupenjoe.mccourse.potion.ModPotions;
+import net.kaupenjoe.mccourse.recipe.ModRecipes;
 import net.kaupenjoe.mccourse.screen.ModScreenHandlers;
 import net.kaupenjoe.mccourse.sound.ModSounds;
 import net.kaupenjoe.mccourse.villager.ModVillagers;
@@ -53,6 +54,7 @@ public class MCCourseMod implements ModInitializer {
         ModEnchantmentEffects.registerEnchantmentEffects();
         ModWorldGeneration.generateModWorldGeneration();
         ModScreenHandlers.registerScreenHandlers();
+        ModRecipes.registerRecipes();
 
         FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES, 600);
         ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.STRAWBERRY, 0.5f);

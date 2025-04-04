@@ -1,0 +1,10 @@
+{
+  "type": "mccourse:crystallizing",
+  "ingredient" : {
+    "item": "mccourse:raw_fluorite"
+  },
+  "result" : {
+    "id": "mccourse:fluorite",
+    "count": 2
+  }
+}
