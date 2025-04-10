@@ -93,6 +93,9 @@ public class ModBlocks {
     public static final Block CRYSTALLIZER = registerBlock("crystallizer",
             new CrystalilizerBlock(AbstractBlock.Settings.create().strength(2f).requiresTool()));
 
+    public static final Block COAL_GENERATOR = registerBlock("coal_generator",
+            new CoalGeneratorBlock(AbstractBlock.Settings.create().strength(2f).requiresTool()));
+
     public static final Block BLACKWOOD_LOG = registerBlock("blackwood_log",
             new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_LOG).strength(3f)));
     public static final Block BLACKWOOD_WOOD = registerBlock("blackwood_wood",

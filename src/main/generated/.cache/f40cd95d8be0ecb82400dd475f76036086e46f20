@@ -1,4 +1,4 @@
-// 1.21.1	2025-04-04T13:34:00.4545306	mccourse/Model Definitions
+// 1.21.1	2025-04-10T13:41:17.2199397	mccourse/Model Definitions
 0d3227cf6230af2fdb60239d95715660695be77d assets\mccourse\models\block\blackwood_door_bottom_right_open.json
 1dd9bf7e5671d59ec87c0caf8ce2e2830172dce0 assets\mccourse\models\item\fluorite_door.json
 930f82d5a5bd6727fe1f152cf739bc366d6dd858 assets\mccourse\models\item\fluorite_chestplate_diamond_trim.json
@@ -32,6 +32,7 @@ bc7d21f942c84b754066fc4a8c9f34dc61953149 assets\mccourse\blockstates\magic_block
 6306761d8dd871ab59d0ca1696bfce70158fc245 assets\mccourse\models\item\fluorite_helmet_emerald_trim.json
 788703d1170a9f522aa937bcad4d222fdf303c80 assets\mccourse\models\block\fluorite_fence_post.json
 2fce96086e9f5cf192ff814534fccf1c771b0406 assets\mccourse\models\block\fluorite_door_bottom_left.json
+9f493d4b9bfdb209369805306b2871ded96b397b assets\mccourse\models\block\coal_generator.json
 f611eda36aada2248d97a016f5e3f5b6e1c8e0b5 assets\mccourse\blockstates\blackwood_wall.json
 d88b59830e8398dd9f54b768dd6bf00bf34f5320 assets\mccourse\models\item\blackwood_leaves.json
 9d6ab2ee4a9f7368903f75a6a0ff19fd437732c0 assets\mccourse\models\block\fluorite_slab_top.json
@@ -86,12 +87,14 @@ d85ac3ed04b1322a6185db22cd69970b21017441 assets\mccourse\models\item\dahlia.json
 8c2a12304b0cc53c6d28ff98825de451ff534e23 assets\mccourse\models\block\blackwood_button.json
 f2aeca2040ea829b8b6878ebe3a168fcb74381d2 assets\mccourse\models\item\chainsaw.json
 647acdc71f248fabd80972f5e8ec879675a5c424 assets\mccourse\blockstates\colored_leaves.json
+45d1a5649ea7fa4c7ce589030b232851f4d91ced assets\mccourse\models\item\coal_generator.json
 bf69819f578a5b0d8c1ce2870b224a810950285b assets\mccourse\models\block\colored_leaves.json
 bee137067ab316ff0baae93a056e9e6f37603496 assets\mccourse\models\item\colored_leaves.json
 83345659caa887ecef0806fb9fb9ae5abcdf9df4 assets\mccourse\models\block\blackwood_stairs.json
 6238cedf396cc42b65a8e5a203149225b3ffd7e5 assets\mccourse\models\item\fluorite_hoe.json
 3b1e0c64989a11b48459ff3f45a04a3077ea9f28 assets\mccourse\models\block\fluorite_pressure_plate_down.json
 b194423ac25ea147a2a3389d814c302577cc3c29 assets\mccourse\models\block\blackwood_wall_side_tall.json
+e05f740d08764027a5b5aceb7cc567fbe6167ea5 assets\mccourse\blockstates\coal_generator.json
 e30c257072f6b8c55b071291199d45ee9e0a6243 assets\mccourse\models\item\fluorite_chestplate_netherite_trim.json
 94d27fc8645c2c6a152d82ad68e43e621bd07b7d assets\mccourse\models\item\fluorite_boots_quartz_trim.json
 aa57f7c390bd95aaaf73b8e318d904f5c8770999 assets\mccourse\models\item\fluorite_boots_redstone_trim.json

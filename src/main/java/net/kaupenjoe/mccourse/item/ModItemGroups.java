@@ -93,6 +93,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.BLACKWOOD_DOOR);
                         entries.add(ModBlocks.BLACKWOOD_TRAPDOOR);
                         entries.add(ModBlocks.BLACKWOOD_WALL);
+                        entries.add(ModBlocks.COAL_GENERATOR);
                     }).build());
     public static void registerItemGroups(){
         MCCourseMod.LOGGER.info("Registering Item Groups for " + MCCourseMod.MOD_ID);

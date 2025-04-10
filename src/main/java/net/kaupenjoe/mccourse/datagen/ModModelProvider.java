@@ -68,6 +68,8 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerDoor(ModBlocks.BLACKWOOD_DOOR);
         blockStateModelGenerator.registerTrapdoor(ModBlocks.BLACKWOOD_TRAPDOOR);
 
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COAL_GENERATOR);
+
     }
 
     @Override

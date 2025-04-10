@@ -43,6 +43,7 @@ public class MCCourseMod implements ModInitializer {
 
     @Override
     public void onInitialize() {
+
         ModItems.registerModItems();
         ModItemGroups.registerItemGroups();
         ModBlocks.registerModBlocks();

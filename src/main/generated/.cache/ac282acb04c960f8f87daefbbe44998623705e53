@@ -1,4 +1,4 @@
-// 1.21.1	2025-04-04T13:34:00.450314	mccourse/Block Loot Tables
+// 1.21.1	2025-04-10T13:41:17.2163605	mccourse/Block Loot Tables
 c684393ced48c1f0886bff2e847281ba3395f412 data\mccourse\loot_table\blocks\blackwood_log.json
 065207005c8c24796b62580091376fda6d07ced1 data\mccourse\loot_table\blocks\stripped_blackwood_log.json
 7d626036d7762431e1be67c8b11783c2089a18f2 data\mccourse\loot_table\blocks\blackwood_pressure_plate.json
@@ -11,6 +11,7 @@ b6049382f344ae9b7e3458dad4836691ce9eca45 data\mccourse\loot_table\blocks\fluorit
 f8ab0d072bc63cf1be0cf393e30cc0e75a90f725 data\mccourse\loot_table\blocks\fluorite_fence_gate.json
 ea16fe03eb790f81998f4e7f557f0c320d41820c data\mccourse\loot_table\blocks\blackwood_planks.json
 f1058c42c454335cbc635c4e904d7067e97796f8 data\mccourse\loot_table\blocks\blackwood_button.json
+eb5f48f595862644f32cfb38f21c07c4417da798 data\mccourse\loot_table\blocks\pedestal.json
 48c7b959785623d28f690251e17743e378a9a74f data\mccourse\loot_table\blocks\fluorite_slab.json
 8afceac5d1772702ea24abafd1b38ea30009a036 data\mccourse\loot_table\blocks\fluorite_stairs.json
 91b97b845dd2589b8f14863617e2d4415bd53b34 data\mccourse\loot_table\blocks\fluorite_wall.json
@@ -22,6 +23,7 @@ a31857ab8b8ff379b6726cca5a45cc7b943f7c6e data\mccourse\loot_table\blocks\fluorit
 693d54f422a82653e2f877164dcde9c8372a3e16 data\mccourse\loot_table\blocks\stripped_blackwood_wood.json
 f5b6b3c27e2daed548bbcf3cfb87197c1acee0f1 data\mccourse\loot_table\blocks\fluorite_end_ore.json
 1e9baddefb917875babae866d7ccbc7cdf330adf data\mccourse\loot_table\blocks\fluorite_door.json
+ad2594b7e13b5f59b5b1917ecea4a0e4aec7cc0b data\mccourse\loot_table\blocks\coal_generator.json
 63205709b0963048878093b7438c0b8da12e8e5f data\mccourse\loot_table\blocks\blackwood_fence_gate.json
 40ceb4a052e93ed6215b679af39803140c4e941b data\mccourse\loot_table\blocks\magic_block.json
 a57b84efc18b60a80a8b513895d7d2b07f902487 data\mccourse\loot_table\blocks\blackwood_wood.json
