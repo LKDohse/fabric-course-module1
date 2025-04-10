@@ -2,17 +2,14 @@ package net.kaupenjoe.mccourse.block.entity.custom;
 
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
 import net.kaupenjoe.mccourse.block.custom.CrystalilizerBlock;
-import net.kaupenjoe.mccourse.block.custom.CrystalilizerBlock_old;
 import net.kaupenjoe.mccourse.block.entity.ImplementedInventory;
 import net.kaupenjoe.mccourse.block.entity.ModBlockEntities;
-import net.kaupenjoe.mccourse.item.ModItems;
 import net.kaupenjoe.mccourse.recipe.CrystallizerRecipe;
 import net.kaupenjoe.mccourse.recipe.CrystallizerRecipeInput;
 import net.kaupenjoe.mccourse.recipe.ModRecipes;
 import net.kaupenjoe.mccourse.screen.custom.CrystallizerScreenHandler;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventories;
@@ -21,8 +18,6 @@ import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.listener.ClientPlayPacketListener;
 import net.minecraft.network.packet.Packet;
 import net.minecraft.network.packet.s2c.play.BlockEntityUpdateS2CPacket;
-import net.minecraft.particle.ParticleTypes;
-import net.minecraft.recipe.Recipe;
 import net.minecraft.recipe.RecipeEntry;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.screen.PropertyDelegate;
@@ -31,7 +26,7 @@ import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Text;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.random.Random;
+import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
@@ -141,7 +136,6 @@ public class CrystallizerBlockEntity extends BlockEntity implements ExtendedScre
     }
 
 
-
     private void resetProgress() {
         this.progress = 0;
         this.maxProgress = DEFAULT_MAX_PROGRESS;
@@ -197,5 +191,73 @@ public class CrystallizerBlockEntity extends BlockEntity implements ExtendedScre
     @Override
     public Packet<ClientPlayPacketListener> toUpdatePacket() {
         return BlockEntityUpdateS2CPacket.create(this);
+    }
+
+
+    //For SIDED INVENTORY (aka compatibility with hoppers etc)
+    // Insert from top, left and front
+    @Override
+    public boolean canInsert(int slot, ItemStack stack, @Nullable Direction side) {
+        // we need to get the LOCAL direction to know which way the block is currently facing
+        // otherwise direction is based off of WORLD direction which may or may not be lined up with the way the block faces
+        Direction localDir = this.getWorld().getBlockState(pos).get(CrystalilizerBlock.FACING);
+
+        if (side == null) return false;
+
+        if (side == Direction.DOWN) return false;
+
+        if (side == Direction.UP) {
+            return slot == INPUT_SLOT;
+        }
+
+        return switch (localDir) {
+            default -> //NORTH
+                    side == Direction.NORTH && slot == INPUT_SLOT ||
+                            side == Direction.EAST && slot == INPUT_SLOT ||
+                            side == Direction.WEST && slot == INPUT_SLOT;
+
+            case EAST -> side.rotateYCounterclockwise() == Direction.NORTH && slot == INPUT_SLOT ||
+                    side.rotateYCounterclockwise() == Direction.EAST && slot == INPUT_SLOT ||
+                    side.rotateYCounterclockwise() == Direction.WEST && slot == INPUT_SLOT;
+
+
+            case SOUTH -> side.getOpposite() == Direction.NORTH && slot == INPUT_SLOT ||
+                    side.getOpposite() == Direction.EAST && slot == INPUT_SLOT ||
+                    side.getOpposite() == Direction.WEST && slot == INPUT_SLOT;
+
+
+            case WEST -> side.rotateYClockwise() == Direction.NORTH && slot == INPUT_SLOT ||
+                    side.rotateYClockwise() == Direction.EAST && slot == INPUT_SLOT ||
+                    side.rotateYClockwise() == Direction.WEST && slot == INPUT_SLOT;
+        };
+    }
+
+    // extract from bottom
+    @Override
+    public boolean canExtract(int slot, ItemStack stack, Direction side) {
+        Direction localDir = this.getWorld().getBlockState(this.pos).get(CrystalilizerBlock.FACING);
+        if (side == Direction.UP) {
+            return false;
+        }
+
+        // Down extract
+        if (side == Direction.DOWN) {
+            return slot == OUTPUT_SLOT;
+        }
+
+        // backside extract
+        // right extract
+        // I wonder if this logic is unit-testable???
+        // This doesn't work because the hopper seems to only extract if at the bottom of a block??
+        // TODO: see if we can overcome this
+        return switch (localDir) {
+            default ->  side == Direction.SOUTH && slot == OUTPUT_SLOT;
+
+            case EAST -> side.rotateYCounterclockwise() == Direction.SOUTH && slot == OUTPUT_SLOT;
+
+            case SOUTH ->  side.getOpposite() == Direction.SOUTH && slot == OUTPUT_SLOT;
+
+            case WEST -> side.rotateYClockwise() == Direction.SOUTH && slot == OUTPUT_SLOT;
+        };
     }
 }
