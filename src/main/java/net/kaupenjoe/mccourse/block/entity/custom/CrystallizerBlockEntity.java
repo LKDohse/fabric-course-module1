@@ -1,6 +1,7 @@
 package net.kaupenjoe.mccourse.block.entity.custom;
 
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
+import net.fabricmc.fabric.api.transfer.v1.transaction.Transaction;
 import net.kaupenjoe.mccourse.block.custom.CrystalilizerBlock;
 import net.kaupenjoe.mccourse.block.entity.ImplementedInventory;
 import net.kaupenjoe.mccourse.block.entity.ModBlockEntities;
@@ -29,6 +30,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
+import team.reborn.energy.api.base.SimpleEnergyStorage;
 
 import java.util.Optional;
 
@@ -45,6 +47,17 @@ public class CrystallizerBlockEntity extends BlockEntity implements ExtendedScre
     private int progress = 0;
     private int maxProgress = 72;
     private final int DEFAULT_MAX_PROGRESS = 72;
+
+    private static final int ENERGY_TRANSFER_AMOUNT = 160;
+    public static final int ENERGY_CRAFTING_AMOUNT = 25; //1800 total per item
+
+    public final SimpleEnergyStorage energyStorage = new SimpleEnergyStorage(64000, ENERGY_TRANSFER_AMOUNT, ENERGY_TRANSFER_AMOUNT) {
+        @Override
+        protected void onFinalCommit() {
+            markDirty();
+            getWorld().updateListeners(pos, getCachedState(), getCachedState(), 3);
+        }
+    };
 
     public CrystallizerBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntities.CRYSTALLIZER_BE, pos, state);
@@ -103,6 +116,7 @@ public class CrystallizerBlockEntity extends BlockEntity implements ExtendedScre
         Inventories.writeNbt(nbt, inventory, registryLookup);
         nbt.putInt("crystallizer.progress", progress);
         nbt.putInt("crystallizer.max_progress", maxProgress);
+        nbt.putLong("crystallizer.energy", energyStorage.amount);
     }
 
     @Override
@@ -110,7 +124,7 @@ public class CrystallizerBlockEntity extends BlockEntity implements ExtendedScre
         Inventories.readNbt(nbt, inventory, registryLookup);
         progress = nbt.getInt("crystallizer.progress");
         maxProgress = nbt.getInt("crystallizer.max_progress");
-
+        energyStorage.amount = nbt.getLong("crystallizer.energy");
         super.readNbt(nbt, registryLookup);
     }
 
@@ -118,6 +132,7 @@ public class CrystallizerBlockEntity extends BlockEntity implements ExtendedScre
         //20 ticks per second
         if (isCrafting()) {
             increaseCraftingProgress();
+            useEnergyForCrafting();
             world.setBlockState(pos, state.with(CrystalilizerBlock.LIT, true));
             markDirty(world, pos, state);
 
@@ -128,6 +143,13 @@ public class CrystallizerBlockEntity extends BlockEntity implements ExtendedScre
         } else {
             world.setBlockState(pos, state.with(CrystalilizerBlock.LIT, false));
             resetProgress();
+        }
+    }
+
+    private void useEnergyForCrafting() {
+        try(Transaction transaction = Transaction.openOuter()){
+            this.energyStorage.extract(ENERGY_CRAFTING_AMOUNT, transaction);
+            transaction.commit();
         }
     }
 
@@ -167,7 +189,11 @@ public class CrystallizerBlockEntity extends BlockEntity implements ExtendedScre
         if (recipe.isEmpty()) return false;
 
         ItemStack output = recipe.get().value().getResult(null);
-        return canInsertAmountIntoOutputSlot(output.getCount()) && canInsertItemIntoOutputSlot(output);
+        return canInsertAmountIntoOutputSlot(output.getCount()) && canInsertItemIntoOutputSlot(output) && hasEnoughEnergyToCraft();
+    }
+
+    private boolean hasEnoughEnergyToCraft() {
+        return this.energyStorage.amount >= (long) ENERGY_CRAFTING_AMOUNT * maxProgress;
     }
 
     private Optional<RecipeEntry<CrystallizerRecipe>> getCurrentRecipe() {
@@ -191,6 +217,11 @@ public class CrystallizerBlockEntity extends BlockEntity implements ExtendedScre
     @Override
     public Packet<ClientPlayPacketListener> toUpdatePacket() {
         return BlockEntityUpdateS2CPacket.create(this);
+    }
+
+    @Override
+    public NbtCompound toInitialChunkDataNbt(RegistryWrapper.WrapperLookup registryLookup) {
+        return createNbt(registryLookup);
     }
 
 

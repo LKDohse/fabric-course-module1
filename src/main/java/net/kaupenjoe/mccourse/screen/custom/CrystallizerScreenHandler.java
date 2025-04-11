@@ -16,7 +16,7 @@ import net.minecraft.util.math.BlockPos;
 public class CrystallizerScreenHandler extends ScreenHandler {
     public final Inventory inventory;
     private final PropertyDelegate propertyDelegate;
-    private final CrystallizerBlockEntity blockEntity;
+    public final CrystallizerBlockEntity blockEntity;
 
     public CrystallizerScreenHandler(int syncId, PlayerInventory inventory, BlockPos pos){
         this(syncId, inventory, inventory.player.getWorld().getBlockEntity(pos), new ArrayPropertyDelegate(2));

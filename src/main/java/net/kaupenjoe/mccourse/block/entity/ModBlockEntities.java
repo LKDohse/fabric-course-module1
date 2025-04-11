@@ -30,5 +30,6 @@ public class ModBlockEntities {
         MCCourseMod.LOGGER.info("Registering block entities for " + MCCourseMod.MOD_ID);
 
         EnergyStorage.SIDED.registerForBlockEntity((blockEntity, direction) -> blockEntity.energyStorage,COAL_GENERATOR_BE);
+        EnergyStorage.SIDED.registerForBlockEntity((blockEntity, direction) -> blockEntity.energyStorage, CRYSTALLIZER_BE);
     }
 }
