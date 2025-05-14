@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.kaupenjoe.mccourse.MCCourseMod;
 import net.kaupenjoe.mccourse.block.ModBlocks;
+import net.kaupenjoe.mccourse.entity.ModEntities;
 import net.kaupenjoe.mccourse.item.custom.*;
 import net.kaupenjoe.mccourse.sound.ModSounds;
 import net.kaupenjoe.mccourse.util.ModTags;
@@ -91,6 +92,11 @@ public class ModItems {
 
     public static final Item SPECTRE_STAFF = registerItem("spectre_staff",
             new Item(new Item.Settings().maxCount(1)));
+
+
+    public static final Item DODO_SPAWN_EGG = registerItem("dodo_spawn_egg",
+            new SpawnEggItem(ModEntities.DODO, 0x465ae0, 0x545978, new Item.Settings()));
+
     public static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(MCCourseMod.MOD_ID, name), item);
     }
