@@ -29,6 +29,7 @@ import net.kaupenjoe.mccourse.recipe.ModRecipes;
 import net.kaupenjoe.mccourse.screen.ModScreenHandlers;
 import net.kaupenjoe.mccourse.sound.ModSounds;
 import net.kaupenjoe.mccourse.villager.ModVillagers;
+import net.kaupenjoe.mccourse.world.gen.ModEntitySpawns;
 import net.kaupenjoe.mccourse.world.gen.ModWorldGeneration;
 import net.minecraft.block.ComposterBlock;
 import net.minecraft.item.ItemStack;
@@ -61,6 +62,7 @@ public class MCCourseMod implements ModInitializer {
         ModRecipes.registerRecipes();
 
         ModEntities.registerModEntities();
+        ModEntitySpawns.addSpawns();
 
         FabricDefaultAttributeRegistry.register(ModEntities.DODO, DodoEntity.createDodoAttributes());
 
