@@ -88,5 +88,8 @@
   "enchantment.mccourse.lightning_striker": "Lightning Striker",
 
   "gui.mccourse.pedestal": "Pedestal",
-  "gui.mccourse.crystallizer": "Crystallizer"
+  "gui.mccourse.crystallizer": "Crystallizer",
+
+  "mccourse.tooltip.liquid.amount.with.capacity": "%s / %s mB",
+  "mccourse.tooltip.liquid.amount": "%s mB"
 }

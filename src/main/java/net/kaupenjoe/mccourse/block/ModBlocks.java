@@ -96,6 +96,9 @@ public class ModBlocks {
     public static final Block COAL_GENERATOR = registerBlock("coal_generator",
             new CoalGeneratorBlock(AbstractBlock.Settings.create().strength(2f).requiresTool()));
 
+    public static final Block TANK = registerBlock("tank",
+            new TankBlock(AbstractBlock.Settings.create().strength(2f).requiresTool().nonOpaque()));
+
     public static final Block BLACKWOOD_LOG = registerBlock("blackwood_log",
             new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_LOG).strength(3f)));
     public static final Block BLACKWOOD_WOOD = registerBlock("blackwood_wood",
@@ -133,7 +136,6 @@ public class ModBlocks {
             new DoorBlock(BlockSetType.ACACIA, AbstractBlock.Settings.create().requiresTool().nonOpaque()));
     public static final Block BLACKWOOD_TRAPDOOR = registerBlock("blackwood_trapdoor",
             new TrapdoorBlock(BlockSetType.ACACIA, AbstractBlock.Settings.create().requiresTool().nonOpaque()));
-
 
 
     private static Block registerBlock(String name, Block block) {
