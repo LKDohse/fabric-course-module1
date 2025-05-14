@@ -93,5 +93,8 @@
   "gui.mccourse.crystallizer": "Crystallizer",
 
   "mccourse.tooltip.liquid.amount.with.capacity": "%s / %s mB",
-  "mccourse.tooltip.liquid.amount": "%s mB"
+  "mccourse.tooltip.liquid.amount": "%s mB",
+
+  "entity.mccourse.dodo": "Dodo",
+  "entity.mccourse.giraffe": "Giraffe"
 }

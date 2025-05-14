@@ -20,6 +20,7 @@ import net.kaupenjoe.mccourse.effect.ModEffects;
 import net.kaupenjoe.mccourse.enchantment.ModEnchantmentEffects;
 import net.kaupenjoe.mccourse.entity.ModEntities;
 import net.kaupenjoe.mccourse.entity.custom.DodoEntity;
+import net.kaupenjoe.mccourse.entity.custom.GiraffeEntity;
 import net.kaupenjoe.mccourse.event.AttackEntityHandler;
 import net.kaupenjoe.mccourse.event.PlayerCopyHandler;
 import net.kaupenjoe.mccourse.item.ModItemGroups;
@@ -65,6 +66,7 @@ public class MCCourseMod implements ModInitializer {
         ModEntitySpawns.addSpawns();
 
         FabricDefaultAttributeRegistry.register(ModEntities.DODO, DodoEntity.createDodoAttributes());
+        FabricDefaultAttributeRegistry.register(ModEntities.GIRAFFE, GiraffeEntity.createAttributes());
 
         FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES, 600);
         ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.STRAWBERRY, 0.5f);

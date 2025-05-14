@@ -12,9 +12,7 @@ import net.kaupenjoe.mccourse.block.entity.ModBlockEntities;
 import net.kaupenjoe.mccourse.block.entity.renderer.PedestalBlockEntityRenderer;
 import net.kaupenjoe.mccourse.block.entity.renderer.TankBlockEntityRenderer;
 import net.kaupenjoe.mccourse.entity.ModEntities;
-import net.kaupenjoe.mccourse.entity.client.DoDoRenderer;
-import net.kaupenjoe.mccourse.entity.client.DodoModel;
-import net.kaupenjoe.mccourse.entity.client.ModEntityModelLayers;
+import net.kaupenjoe.mccourse.entity.client.*;
 import net.kaupenjoe.mccourse.fluid.ModFluids;
 import net.kaupenjoe.mccourse.screen.ModScreenHandlers;
 import net.kaupenjoe.mccourse.screen.custom.CoalGeneratorScreen;
@@ -54,6 +52,10 @@ public class MccourseModClient implements ClientModInitializer {
 
         EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.DODO, DodoModel::getTexturedModelData);
         EntityRendererRegistry.register(ModEntities.DODO, DoDoRenderer::new);
+
+        EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.GIRAFFE, GiraffeModel::getTexturedModelData);
+        EntityRendererRegistry.register(ModEntities.GIRAFFE, GiraffeRenderer::new);
+
 
 
         ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> world != null && pos != null ?
