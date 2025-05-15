@@ -106,6 +106,18 @@ public class ModItems {
     public static final Item TOMAHAWK_ITEM = registerItem("tomahawk",
             new TomahawkItem(new Item.Settings().maxCount(16)));
 
+    public static final Item IRON_WARTURTLE_ARMOR = registerItem("iron_warturtle_armor",
+            new WarturtleArmorItem(ArmorMaterials.IRON, new Item.Settings().maxDamage(200)));
+    public static final Item GOLD_WARTURTLE_ARMOR = registerItem("gold_warturtle_armor",
+            new WarturtleArmorItem(ArmorMaterials.GOLD, new Item.Settings().maxDamage(400)));
+    public static final Item DIAMOND_WARTURTLE_ARMOR = registerItem("diamond_warturtle_armor",
+            new WarturtleArmorItem(ArmorMaterials.DIAMOND, new Item.Settings().maxDamage(600)));
+    public static final Item NETHERITE_WARTURTLE_ARMOR = registerItem("netherite_warturtle_armor",
+            new WarturtleArmorItem(ArmorMaterials.NETHERITE, new Item.Settings().maxDamage(800)));
+    public static final Item FLUORITE_WARTURTLE_ARMOR = registerItem("fluorite_warturtle_armor",
+            new WarturtleArmorItem(ModArmorMaterials.FLUORITE_ARMOR_MATERIAL, new Item.Settings().maxDamage(1000)));
+
+
     public static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(MCCourseMod.MOD_ID, name), item);
     }

@@ -1,6 +1,7 @@
 package net.kaupenjoe.mccourse.screen.custom;
 
 import net.kaupenjoe.mccourse.entity.custom.WarturtleEntity;
+import net.kaupenjoe.mccourse.item.custom.WarturtleArmorItem;
 import net.kaupenjoe.mccourse.screen.ModScreenHandlers;
 import net.minecraft.block.Block;
 import net.minecraft.block.DyedCarpetBlock;
@@ -36,12 +37,12 @@ public class WarturtleScreenHandler extends ScreenHandler {
         warturtleContainer.onOpen(inventory.player);
 
 //        // Armor Slot
-//        this.addSlot(new Slot(warturtleContainer, 0, 8, 63) {
-//            @Override
-//            public boolean canInsert(ItemStack stack) {
-//                return stack.getItem() instanceof WarturtleArmorItem;
-//            }
-//        });
+        this.addSlot(new Slot(warturtleContainer, 0, 8, 63) {
+            @Override
+            public boolean canInsert(ItemStack stack) {
+                return stack.getItem() instanceof WarturtleArmorItem;
+            }
+        });
 //        // Dye Slot
 //        this.addSlot(new Slot(warturtleContainer, 1, 44, 63) {
 //            @Override
