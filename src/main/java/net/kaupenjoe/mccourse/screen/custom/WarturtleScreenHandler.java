@@ -43,18 +43,18 @@ public class WarturtleScreenHandler extends ScreenHandler {
                 return stack.getItem() instanceof WarturtleArmorItem;
             }
         });
-//        // Dye Slot
-//        this.addSlot(new Slot(warturtleContainer, 1, 44, 63) {
-//            @Override
-//            public boolean canInsert(ItemStack stack) {
-//                return warturtleEntity.hasArmorOn() && Block.getBlockFromItem(stack.getItem()) instanceof DyedCarpetBlock;
-//            }
-//
-//            @Override
-//            public int getMaxItemCount() {
-//                return 1;
-//            }
-//        });
+        // Dye Slot
+        this.addSlot(new Slot(warturtleContainer, 1, 44, 63) {
+            @Override
+            public boolean canInsert(ItemStack stack) {
+                return warturtleEntity.hasArmorOn() && Block.getBlockFromItem(stack.getItem()) instanceof DyedCarpetBlock;
+            }
+
+            @Override
+            public int getMaxItemCount() {
+                return 1;
+            }
+        });
 
         // Chest Slot Tier 1
         this.addSlot(new Slot(warturtleContainer, 2, 72, 27) {
