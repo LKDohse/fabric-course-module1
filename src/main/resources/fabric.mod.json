@@ -26,6 +26,9 @@
 		],
 		"rei_client": [
 			"net.kaupenjoe.mccourse.compat.MCCourseModREIClient"
+		],
+		"terrablender": [
+			"net.kaupenjoe.mccourse.MCCourseMod"
 		]
 	},
 	"mixins": [

@@ -8,6 +8,7 @@ import net.kaupenjoe.mccourse.trim.ModTrimMaterials;
 import net.kaupenjoe.mccourse.trim.ModTrimPatterns;
 import net.kaupenjoe.mccourse.world.ModConfiguredFeatures;
 import net.kaupenjoe.mccourse.world.ModPlacedFeatures;
+import net.kaupenjoe.mccourse.world.biome.ModBiomes;
 import net.minecraft.registry.RegistryBuilder;
 import net.minecraft.registry.RegistryKeys;
 
@@ -34,6 +35,7 @@ public class MccourseDataGenerator implements DataGeneratorEntrypoint {
 		registryBuilder.addRegistry(RegistryKeys.ENCHANTMENT, ModEnchantments::bootstrap);
 		registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap);
 		registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, ModPlacedFeatures::bootstrap);
+		registryBuilder.addRegistry(RegistryKeys.BIOME, ModBiomes::bootstrap);
 
 	}
 }
