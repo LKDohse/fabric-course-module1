@@ -15,10 +15,7 @@ import net.kaupenjoe.mccourse.entity.ModEntities;
 import net.kaupenjoe.mccourse.entity.client.*;
 import net.kaupenjoe.mccourse.fluid.ModFluids;
 import net.kaupenjoe.mccourse.screen.ModScreenHandlers;
-import net.kaupenjoe.mccourse.screen.custom.CoalGeneratorScreen;
-import net.kaupenjoe.mccourse.screen.custom.CrystallizerScreen;
-import net.kaupenjoe.mccourse.screen.custom.PedestalScreen;
-import net.kaupenjoe.mccourse.screen.custom.TankScreen;
+import net.kaupenjoe.mccourse.screen.custom.*;
 import net.kaupenjoe.mccourse.util.ModModelPredicates;
 import net.minecraft.client.color.world.BiomeColors;
 import net.minecraft.client.gui.screen.ingame.HandledScreens;
@@ -73,5 +70,6 @@ public class MccourseModClient implements ClientModInitializer {
         HandledScreens.register(ModScreenHandlers.CRYSTALLIZER_SCREEN_HANDLER, CrystallizerScreen::new);
         HandledScreens.register(ModScreenHandlers.COAL_GENERATOR_SCREEN_HANDLER, CoalGeneratorScreen::new);
         HandledScreens.register(ModScreenHandlers.TANK_SCREEN_HANDLER, TankScreen::new);
+        HandledScreens.register(ModScreenHandlers.WARTURTLE_SCREEN_HANDLER, WarturtleScreen::new);
     }
 }
