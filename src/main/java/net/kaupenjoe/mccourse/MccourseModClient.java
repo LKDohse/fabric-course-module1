@@ -56,6 +56,9 @@ public class MccourseModClient implements ClientModInitializer {
         EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.GIRAFFE, GiraffeModel::getTexturedModelData);
         EntityRendererRegistry.register(ModEntities.GIRAFFE, GiraffeRenderer::new);
 
+        EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.WARTURTLE, WarturtleModel::getTexturedModelData);
+        EntityRendererRegistry.register(ModEntities.WARTURTLE, WarturtleRenderer::new);
+
         EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.TOMAHAWK, TomahawkProjectileModel::getTexturedModelData);
         EntityRendererRegistry.register(ModEntities.TOMAHAWK, TomahawkProjectileRenderer::new);
 

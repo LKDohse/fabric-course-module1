@@ -100,6 +100,9 @@ public class ModItems {
     public static final Item GIRAFFE_SPAWN_EGG = registerItem("giraffe_spawn_egg",
             new SpawnEggItem(ModEntities.GIRAFFE, 0xe7d7a5, 0x7e5b41, new Item.Settings()));
 
+    public static final Item WARTURTLE_SPAWN_EGG = registerItem("warturtle_spawn_egg",
+            new SpawnEggItem(ModEntities.WARTURTLE, 0xa86518, 0x3b260f, new Item.Settings()));
+
     public static final Item TOMAHAWK_ITEM = registerItem("tomahawk",
             new TomahawkItem(new Item.Settings().maxCount(16)));
 

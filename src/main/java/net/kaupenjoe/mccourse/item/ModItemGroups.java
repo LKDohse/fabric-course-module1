@@ -53,6 +53,7 @@ public class ModItemGroups {
 
                         entries.add(ModItems.DODO_SPAWN_EGG);
                         entries.add(ModItems.GIRAFFE_SPAWN_EGG);
+                        entries.add(ModItems.WARTURTLE_SPAWN_EGG);
 
                         entries.add(ModItems.TOMAHAWK_ITEM);
 
